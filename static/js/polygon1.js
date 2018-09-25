@@ -26,7 +26,7 @@ $(function(){
 
         //var wgs84Sphere = new ol.Sphere(6378137);
         //var output = formatArea(geom);
-        $("#square").val(output);
+        //$("#square").val(output);
         var geojson_c = new ol.format.GeoJSON();
         var current_feature=e.feature;
         var geo = current_feature.getGeometry();
@@ -48,6 +48,12 @@ $(function(){
         var container = document.getElementById('popup');
         var save_button=$("#save_submit");
         var update_button=$("#save_update");
+        $("#name").val("");
+        $("#graphictype").val("");
+        $("#graphiclabel").val("");
+        $("#discrib").val("");
+        $("#graphicaddress").val("");
+
         container.style.display="block";
         update_button.hide();
         save_button.show();
@@ -147,7 +153,7 @@ $(function(){
                     var output;
                     //当面积大于10000时，转换为平方千米，否则为平方米
 
-                    output = (Math.round(area/1000000*100)/100)
+                    output = (Math.round(area*100)/100)
 
                     return output;
                 };

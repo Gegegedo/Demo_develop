@@ -8,6 +8,8 @@
 <meta name="author" content="">
 <title>账号查询（Bootstrap）</title>
 {% load staticfiles %}
+<link href="{% static 'css/yds/base.css'  %}" rel="stylesheet" >
+<script src="{% static 'js/yds/base.js' %}"></script>
 <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.js' %}"></script>
 <script src="{% static 'js/bootstrap-table.min.js' %}"></script>
@@ -31,6 +33,12 @@
         height:50%;
         min-height:34px;
     }
+    table{
+        height:250px;
+        font-size:.13rem;
+        text-align:center;
+        vertical-align: middle;
+    }
 </style>
 </head>
 <body class="bs-docs-home">
@@ -42,7 +50,8 @@
                         <div style="width:93%; display:-webkit-flex; align-items:center;">
                             <input type='text' class="search-input" style="width:45%" placeholder="请输入帐号、部门名称、联系人、电话等" id="message" name="message"/>
                             <span style="height:100%; display:-webkit-flex; align-items:center; width:7%; margin-left:10px;">
-                                <button class="btn btn-primary" style="border-radius:6px; height:50%; width:100%; min-height:34px; font-size:14px"  id="search_button"><img src="{% static 'img/search.png' %}" style="padding-left:5px;">查询</button>
+                                <button class="btn btn-primary" style="border-radius:6px; height:50%; width:100%; min-height:34px; font-size:.12rem"  id="search_button">
+                                    <img src="{% static 'img/search.png' %}" style="height:.15rem">查询</button>
                             </span>
                         </div>
                     </div>

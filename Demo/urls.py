@@ -48,6 +48,7 @@ urlpatterns = [
     url(r'^gs_show_list/', views.gs_show_list),
     url(r'^ib_plotting/', views.ib_plotting),
     url(r'^developing/', views.developing),
+    url(r'^seperate_load_draw/', views.seperate_load_draw),
 ##########################################################################
 
     url(r'^is_authenticated/', views.is_authenticated),
@@ -84,7 +85,19 @@ urlpatterns = [
     url(r'^downloadImage/',views.downloadImage),
     url(r'^test/',views.test),
     url(r'^login_page/', views.login_page),
-    url(r'^_resource_search/', views._resource_search)
+    url(r'^_resource_search/', views._resource_search),
+
+    url(r'^_autographiclabel_inquiry/', views._autographiclabel_inquiry),
+    url(r'^new_password_reset/', views.new_password_reset),
+    url(r'^locate/', views.locate),
+    url(r'^ceshi/', views.ceshi),
+    url(r'^regional_present_situation/', views.regional_present_situation),
+    url(r'^ceshi/', views.ceshi),
+    url(r'^ceshi2/', views.ceshi2),
+    url(r'^homeceshi/', views.homeceshi),
+    url(r'^chaiqian/', views.chaiqian),
+    url(r'^ziyuanfenleixiangcha/', views.ziyuanfenleixiangcha),
+
 ]
 
 urlpatterns += staticfiles_urlpatterns()

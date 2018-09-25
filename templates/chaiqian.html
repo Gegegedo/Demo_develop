@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>历史情况详查</title>
+     {% load staticfiles %}
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/yds/base.css' %}">
+    <script src="{% static 'js/yds/base.js' %}"></script>
+    <style>
+        .box{
+            width:96%;
+            margin-left:2%;
+            margin-top:.2rem;
+            height:1rem;
+        }
+        a{
+            text-decoration: none;
+        }
+        .btn{
+            width:.8rem;
+            vertical-align:top;
+            height:.4rem;
+            border-radius:5px;
+            background:#0090ff;
+            color:white;
+            margin-left:.5rem;
+        }
+        .yy-time{
+            height:.4rem;
+            line-height:.4rem;
+            font-size:.2rem;
+        }
+        .sel{
+            width:1.2rem;
+            height:.4rem;
+            background:#f3f5f8;
+            border-radius:4px;
+            border:1px solid #dddddd;
+        }
+        .yy-time2{
+            margin-left:.2rem;
+        }
+        .sel2{
+            margin-left:.5rem;
+        }
+        #container{
+             display:block;
+        }
+        .container{
+              display:none;
+        }
+        .yy-as{
+            margin-top:.05rem;
+            min-height:10px;
+            height:.3rem;
+            background:#0f87f0;
+            color:white;
+            font-size:.12rem;
+            float:right;
+            border-radius:5px;
+            padding-right:.1rem;
+        }
+        .yy-n1{
+            margin-top:.075rem;
+            height:.15rem;
+            margin-left:.075rem;
+        }
+        .abc{
+            height:.3rem;
+            float:right;
+            line-height:.3rem;
+            margin-left:.1rem;
+        }
+        .yy-sure{
+            border:0;
+        }
+    </style>
+    </head>
+<body>
+        <div class="box">
+            <span class="yy-time">起始时间：</span>
+            <select class="sel">
+                <option>请选择时间</option>
+                <option selected="selected">2017-11</option>
+            </select>
+            <span class="yy-time yy-time2">终止时间：</span>
+            <select class="sel">
+                <option>请选择时间</option>
+                <option selected="selected">2018-4</option>
+            </select>
+            <select class="sel sel2">
+                <option value="全部" selected="selected">全部</option>
+                <option value="违建">违建</option>
+                <option value="疑似违建">疑似违建</option>
+                <option value="拆迁">拆迁</option>
+                <option value="疑似拆迁">疑似拆迁</option>
+            </select>
+            <button class="btn yy-sure">确定</button>
+            <a class="yy-as" href="{% static 'baogao/xinxitongji.pdf' %}" download id="scbg">
+            <img src="{% static 'img/baogao.png' %}" class="yy-n1">
+                <p class="abc">生成报告</p>
+            </a>
+        </div>
+        <script src="static/js/yds/jquery.js"></script>
+        <script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+		<script src="https://cdn.hcharts.cn/highcharts/modules/exporting.js"></script>
+		<script src="https://cdn.hcharts.cn/highcharts/modules/export-data.js"></script>
+
+		<div id="container" class="container"></div>
+        <div id="container2" class="container"></div>
+		<div id="container3" class="container"></div>
+        <div id="container4" class="container"></div>
+		<div id="container5" class="container"></div>
+    </body>
+<script>
+    //全部的信息start
+    Highcharts.chart('container', {
+    chart: {
+        type: 'column',
+
+    },
+    legend: {
+						itemStyle: {
+								color: '#000000',
+								fontSize:'.15rem'
+						}
+				},
+    credits: {
+			enabled: false
+			},
+
+exporting: {
+            enabled:false
+},
+    title: {
+        useHTML:true,
+        text: '信息统计',
+        style:{
+            fontSize:'.2rem'
+        }
+    },
+    xAxis: {
+        categories: [
+            '违建',
+            '疑似违建',
+            '拆迁',
+            '疑似拆迁'
+        ],
+        crosshair: true,
+        labels : {
+        style : {
+            'fontSize' : '18px'
+        }
+    }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ' ',
+        },
+        labels: {
+								style: {
+										color: 'black',
+										fontSize:'20px'
+								}
+						}
+
+
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:20px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:10px"><b>{point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.1,
+            borderWidth: 2
+        }
+    },
+    series: [{
+        name: '面积（平方公里）',
+        data: [500, 100, 100, 100]
+
+    }, {
+        name: '事件数量（个）',
+        data: [50, 20, 20, 10]
+    }]
+});
+//全部的信息end
+//违建start
+Highcharts.chart('container2', {
+    chart: {
+        type: 'column',
+    },
+    legend: {
+						itemStyle: {
+								color: '#000000',
+								fontSize:'16px'
+						}
+				},
+    credits: {
+			enabled: false
+			},
+
+exporting: {
+            enabled:false
+},
+    title: {
+        text: '违建',
+        style:{
+            "fontSize":"26px"
+        }
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: [
+            '违建'
+        ],
+        crosshair: true,
+        labels : {
+        style : {
+            'fontSize' : '18px'
+        }
+    }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ' ',
+        },
+        labels: {
+								style: {
+										color: 'black',
+										fontSize:'20px'
+								}
+						}
+
+
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:20px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:10px"><b>{point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.3,
+            borderWidth: 2
+        }
+    },
+    series: [{
+        name: '面积（平方公里）',
+        data: [500]
+
+    }, {
+        name: '事件数量（个）',
+        data: [50]
+    }]
+});
+//违建end
+//疑似违建start
+Highcharts.chart('container3', {
+    chart: {
+        type: 'column',
+
+    },
+    legend: {
+						itemStyle: {
+								color: '#000000',
+								<!--fontWeight: 'bold',-->
+								fontSize:'16px'
+						}
+				},
+    credits: {
+			enabled: false
+			},
+
+exporting: {
+            enabled:false
+},
+    title: {
+        text: '疑似违建',
+        style:{
+            "fontSize":"26px"
+        }
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: [
+            '疑似违建'
+        ],
+        crosshair: true,
+        labels : {
+        style : {
+            'fontSize' : '18px'
+        }
+    }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ' ',
+        },
+        labels: {
+								style: {
+										color: 'black',
+										fontSize:'20px'
+								}
+						}
+
+
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:20px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:10px"><b>{point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.3,
+            borderWidth: 2
+        }
+    },
+    series: [{
+        name: '面积（平方公里）',
+        data: [100]
+
+    }, {
+        name: '事件数量（个）',
+        data: [20]
+    }]
+});
+//疑似违建end
+//拆迁start
+Highcharts.chart('container4', {
+    chart: {
+        type: 'column',
+
+    },
+    legend: {
+						itemStyle: {
+								color: '#000000',
+								<!--fontWeight: 'bold',-->
+								fontSize:'16px'
+						}
+				},
+    credits: {
+			enabled: false
+			},
+
+exporting: {
+            enabled:false
+},
+    title: {
+        text: '拆迁',
+        style:{
+            "fontSize":"26px"
+        }
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: [
+            '拆迁'
+        ],
+        crosshair: true,
+        labels : {
+        style : {
+            'fontSize' : '18px'
+        }
+    }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ' ',
+        },
+        labels: {
+								style: {
+										color: 'black',
+										fontSize:'20px'
+								}
+						}
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:20px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:10px"><b>{point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.3,
+            borderWidth: 2
+        }
+    },
+    series: [{
+        name: '面积（平方公里）',
+        data: [100]
+
+    }, {
+        name: '事件数量（个）',
+        data: [20]
+    }]
+});
+//拆迁end
+
+
+//疑似拆迁start
+    Highcharts.chart('container5', {
+    chart: {
+        type: 'column',
+
+    },
+    legend: {
+						itemStyle: {
+								color: '#000000',
+								<!--fontWeight: 'bold',-->
+								fontSize:'16px'
+						}
+				},
+    credits: {
+			enabled: false
+			},
+
+exporting: {
+            enabled:false
+},
+    title: {
+        text: '疑似拆迁',
+        style:{
+            "fontSize":"26px"
+        }
+    },
+    subtitle: {
+        text: ''
+    },
+    xAxis: {
+        categories: [
+            '疑似拆迁'
+        ],
+        crosshair: true,
+        labels : {
+        style : {
+            'fontSize' : '18px'
+        }
+    }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: ' ',
+        },
+        labels: {
+								style: {
+										color: 'black',
+										fontSize:'20px'
+								}
+						}
+
+
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:20px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:10px"><b>{point.y:.1f}</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.3,
+            borderWidth: 2
+        }
+    },
+    series: [{
+        name: '面积（平方公里）',
+        data: [100]
+
+    }, {
+        name: '事件数量（个）',
+        data: [10]
+    }]
+});
+//疑似拆迁end
+
+
+</script>
+<script>
+    $(".yy-sure").click(function(){
+        var select = document.getElementsByClassName("sel2")[0];
+        var value = select.value;
+        var options = select.options;
+        var value1 = options[0].value;
+        var text1 = options[0].text;
+        var index = select.selectedIndex;
+        var selectedText = options[index].text;
+        console.log(selectedText);
+        var scbg = document.getElementById("scbg");
+        if(selectedText=="全部"){
+            $("#container").css("display","block");
+            $("#container2").css("display","none");
+            $("#container3").css("display","none");
+            $("#container4").css("display","none");
+            $("#container5").css("display","none");
+            scbg.href="{% static 'baogao/xinxitongji.pdf' %}";
+        }
+        else if(selectedText=="违建"){
+            $("#container2").css("display","block");
+            $("#container").css("display","none");
+            $("#container3").css("display","none");
+            $("#container4").css("display","none");
+            $("#container5").css("display","none");
+            scbg.href="{% static 'baogao/weijian.pdf' %}";
+        }
+        else if(selectedText=="疑似违建"){
+            $("#container3").css("display","block");
+            $("#container").css("display","none");
+            $("#container2").css("display","none");
+            $("#container4").css("display","none");
+            $("#container5").css("display","none");
+        }
+        else if(selectedText=="拆迁"){
+            $("#container4").css("display","block");
+            $("#container").css("display","none");
+            $("#container2").css("display","none");
+            $("#container3").css("display","none");
+            $("#container5").css("display","none");
+        }
+        else if(selectedText=="疑似拆迁"){
+            $("#container5").css("display","block");
+            $("#container").css("display","none");
+            $("#container2").css("display","none");
+            $("#container3").css("display","none");
+            $("#container4").css("display","none");
+        }
+    })
+</script>
+</html>

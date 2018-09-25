@@ -8,12 +8,14 @@
 <meta name="author" content="">
 <title>权限管理</title>
       {% load staticfiles %}
+    <link href="{% static 'css/yds/base.css'  %}" rel="stylesheet" >
+    <script src="{% static 'js/yds/base.js' %}"></script>
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/bootstrap-table.min.js' %}"></script>
     <script src="{% static 'js/bootstrap-table-locale-all.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/bootstrap-table.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
     <!--<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css">-->
     <!--<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.min.css">-->
     <!--[if lt IE 9]><!--<script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script>--><![endif]-->
@@ -32,7 +34,8 @@
     background-color: #ffffff;
     background-image: url(line.png);
 }
-table {
+td{
+    vertical-align:middle;
 
 }
 .authorityTd {
@@ -54,18 +57,17 @@ table {
 
     <!--<div class="container theme-showcase">-->
     <div style="height:95%;overflow-y:auto">
-        <h1 style=" line-height:2em;"></h1><br/>
         <div class="row">
             <div class="col-sm-12 col-lg-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h2><strong>权限管理</strong></h2>
-                          <p>{{ userid  }}{{  isactive }}</p>
-                    </div>
+                <div class="panel panel-primary" style="border:none">
+                    <!--<div class="panel-heading">-->
+                        <!--<h2><strong>权限管理</strong></h2>-->
+                          <!--<p>{{ userid  }}{{  isactive }}</p>-->
+                    <!--</div>-->
                     <div class="panel-body">
 
                         <div class="table-responsive">
-                            <table id="author_manage" style="height:40px;" border="0" cellspacing="0" cellpadding="0" class="table"></table>
+                            <table id="author_manage" style="height:20px;" border="0" cellspacing="0" cellpadding="0" class="table"></table>
                         </div>
 
                     </div>

@@ -18,12 +18,14 @@ import json
 from django.core import serializers
 from web.models import Myuser
 from web.models import GraphicLabel
+from web.models import AutoGraphicLabel
 from django.forms.models import model_to_dict
 from django.core.serializers.json import DjangoJSONEncoder
 from django.http import HttpResponse, JsonResponse
 User = get_user_model()
 from web.ImageryServer import DB_Workshop
 from web.ImageryServer import ImagePubMan
+from web.ImageryServer import Auto_graphiclabel
 import urllib.request
 from django.db.models import Q
 #from web.ImageryServer import ImagePre
@@ -75,10 +77,10 @@ def add_account(request):
     return render(request,
                   template_name='am_add_Account.html')
 
-#@login_required(login_url='/login/')
-#@permission_required('resource_permission',login_url='/index/',raise_exception=True)
+# @login_required(login_url='/login/')
+# @permission_required('resource_permission',login_url='/index/',raise_exception=True)
 def account_inquiry(request):
-    users_temp=User.objects.all()
+    users_temp=User.objects.all().order_by('-date_joined')
     users = {}
     count = 1
     for i in range(len(users_temp)):
@@ -172,7 +174,7 @@ def deleteImage(request):
 #####################################################
 
 def authority_management(request):
-    users_temp=User.objects.all()
+    users_temp=User.objects.all().order_by('-date_joined')
     d_users={}
     for i in range(len(users_temp)):
           d_users[i] = model_to_dict(users_temp[i])
@@ -193,28 +195,33 @@ def ranging(request):
 def home_municipal(request):
     return render(request,
                   template_name='home_municipal.html')
+def ceshi(request):
+    return render(request,
+                  template_name='ceshi.html')
+def regional_present_situation(request):
+    return render(request,
+                  template_name='regional_present_situation.html')
+def ceshi(request):
+    return render(request,
+                  template_name='ceshi.html')
+def ziyuanfenleixiangcha(request):
+    return render(request,
+                  template_name='ziyuanfenleixiangcha.html')
+
 
 
 def demolition_management(request):
-    ib_draws = GraphicLabel.objects.filter(graphiclabel__contains="拆迁")
-    d_ib_draws = {}
-    for i in range(len(ib_draws)):
-        d_ib_draws[i] = model_to_dict(ib_draws[i])
-        id=d_ib_draws[i]["graphic_provide"]
-        user=User.objects.get(id=id)
-        d_ib_draws[i]["graphic_provide"]=user.contact_usr
     return render(request, 'de_management.html')
 
 def ib_event_management(request):
-    ib_draws = GraphicLabel.objects.filter(graphiclabel__contains="违建")
-    d_ib_draws = {}
-    for i in range(len(ib_draws)):
-        d_ib_draws[i] = model_to_dict(ib_draws[i])
-        id = d_ib_draws[i]["graphic_provide"]
-        user = User.objects.get(id=id)
-        d_ib_draws[i]["graphic_provide"] = user.contact_usr
     return render(request,'ib_event_management.html')
 
+def chaiqian(request):
+    return render(request,'chaiqian.html')
+def ceshi2(request):
+    return render(request,'ceshi2.html')
+def homeceshi(request):
+    return render(request,'homeceshi.html')
 def demolition_compare(request):
     return render(request,
                   template_name='de_compare.html')
@@ -411,7 +418,7 @@ def permission_revise(request):
 def _account_inquiry(request):
     message = request.POST.get('message',False)
     if message=='':
-        users_temp = User.objects.all()
+        users_temp = User.objects.all().order_by('-date_joined')
         users = {}
         count = 1
         for i in range(len(users_temp)):
@@ -429,8 +436,8 @@ def _account_inquiry(request):
             users[i]['user_permissions'] = user_permissions
         return JsonResponse({"users": users, "status": True})
     else:
-        users_temp=User.objects.filter(Q(username=message)\
-        |Q(phone=message)|Q(department_name=message)|Q(contact_usr=message))
+        users_temp=User.objects.filter(Q(username__contains=message)\
+        |Q(phone__contains=message)|Q(department_name__contains=message)|Q(contact_usr__contains=message)).order_by('-date_joined')
         users = {}
         count=1
         for i in range(len(users_temp)):
@@ -492,7 +499,7 @@ def status_revise(request):
     user=User.objects.get(id=id)
     user.is_active=is_active
     user.save()
-    return HttpResponse("success")
+    return JsonResponse({"message":"success"})
 
 
 def save_draw(request):
@@ -525,8 +532,6 @@ def update_draw(request):
     graphictype = request.POST.get('graphictype', False)
     graphiclabel = request.POST.get('graphiclabel', False)
     discrib = request.POST.get('discrib', False)
-    square = request.POST.get('square', 0)
-    foundtime = request.POST.get('foundtime',False )
     address= request.POST.get('address', '无')
     draw_obj=GraphicLabel.objects.get(id=id)
     if draw_obj:
@@ -534,11 +539,47 @@ def update_draw(request):
         draw_obj.graphictype=graphictype
         draw_obj.graphiclabel=graphiclabel
         draw_obj.discrib=discrib
+        draw_obj.address=address
         draw_obj.save()
-        return render(request, 'map_geo.html', {'message': 'success'})
+        return HttpResponse("success")
     else:
-        return render(request, 'map_geo.html', {'message': 'fail'})
+        return HttpResponse("fail")
 
+def seperate_load_draw(request):
+    draws=GraphicLabel.objects.all()
+    ibuild_draws=[]
+    sibuild_draws=[]
+    demolition_draws=[]
+    sdemolition_draws=[]
+    # ibuild_draws = GraphicLabel.objects.filter( graphiclabel="违建")
+    # sibuild_draws = GraphicLabel.objects.filter(graphiclabel="疑似违建")
+    # demolition_draws=GraphicLabel.objects.filter(graphiclabel="拆迁")
+    # sdemolition_draws = GraphicLabel.objects.filter(graphiclabel="疑似拆迁")
+    #draws=model_to_dict(draws)
+    for draw in draws:
+          draw=model_to_dict(draw)
+          json_context = json.loads(draw["context"])
+          json_context['properties']['id'] = draw["id"]
+          draw["context"] = json.dumps(json_context)
+
+          if(draw["graphiclabel"]=="违建"):
+              ibuild_draws.append(draw)
+          if (draw["graphiclabel"] == "疑似违建"):
+              sibuild_draws.append(draw)
+          if (draw["graphiclabel"] == "违建"):
+              demolition_draws.append(draw)
+          if (draw["graphiclabel"] == "疑似违建"):
+              sdemolition_draws.append(draw)
+
+    # ibuild_draws=model_to_dict(ibuild_draws)
+    # sibuild_draws=model_to_dict(sibuild_draws)
+    # demolition_draws=model_to_dict(demolition_draws)
+    # sdemolition_draws=model_to_dict(sdemolition_draws)
+    # ibuild_draws_data = [draw.context for draw in ibuild_draws]
+    # sibuild_draws_data = [draw.context for draw in sibuild_draws]
+    # demolition_draws_data = [draw.context for draw in demolition_draws]
+    # sdemolition_draws_data = [draw.context for draw in sdemolition_draws]
+    return JsonResponse({'ibuild': json.dumps(ibuild_draws,cls=DjangoJSONEncoder),"sibuild":json.dumps(sibuild_draws,cls=DjangoJSONEncoder),"demolition":json.dumps(demolition_draws,cls=DjangoJSONEncoder),"sdemolition":json.dumps(sdemolition_draws,cls=DjangoJSONEncoder)})
 
 def load_all_draw(request):
     all_draws=GraphicLabel.objects.all()
@@ -588,9 +629,26 @@ def _map_inquiry(request):
     else:
         return HttpResponse({'message': '查找结果为空！'})
 
+def _autographiclabel_inquiry(request):
+    graphictype=request.GET.get('type',False)
+    if graphictype:
+        autographiclabel_temp=AutoGraphicLabel.objects.filter(graphictype=graphictype)
+        #autographiclabel_temp = AutoGraphicLabel.objects.all()
+        d_autographiclabel = {}
+        for i in range(len(autographiclabel_temp)):
+            d_autographiclabel[i] = autographiclabel_temp[i].context
+        if d_autographiclabel:
+            return JsonResponse({'d_autographiclabel':d_autographiclabel})
+        else:
+            return HttpResponse({'message': '查找结果为空！'})
+    else:
+        return HttpResponse({'message': '查找结果为空！'})
+
+
 def test(request):
-    ImagePre.preprogress()
+    #ImagePre.preprogress()
     #DB_Workshop.saveImage('/media/zhou/文档/yaogan')
+    Auto_graphiclabel.main()
 
 
 
@@ -620,12 +678,13 @@ def _ib_event_search(request):
     if(graphiclabel):
         kwargs['graphiclabel'] = graphiclabel
     if(name):
-        kwargs['name'] = name
+        kwargs['name__contains'] = name
     if(address):
-        kwargs['address'] = address
+        kwargs['address__contains'] = address
     if(createtime):
         kwargs['createtime'] = createtime
-    ib_draws = GraphicLabel.objects.filter(**kwargs)
+    ib_draws = GraphicLabel.objects.filter(**kwargs).order_by('-createtime')
+
     d_ib_draws = {}
     for i in range(len(ib_draws)):
         d_ib_draws[i] = model_to_dict(ib_draws[i])
@@ -645,12 +704,12 @@ def _de_event_search(request):
     if (graphiclabel):
         kwargs['graphiclabel'] = graphiclabel
     if (name):
-        kwargs['name'] = name
+        kwargs['name__contains'] = name
     if (address):
-        kwargs['address'] = address
+        kwargs['address__contains'] = address
     if (createtime):
         kwargs['createtime'] = createtime
-    de_draws = GraphicLabel.objects.filter(**kwargs)
+    de_draws = GraphicLabel.objects.filter(**kwargs).order_by('-createtime')
     d_de_draws = {}
     for i in range(len(de_draws)):
         d_de_draws[i] = model_to_dict(de_draws[i])
@@ -659,6 +718,23 @@ def _de_event_search(request):
         d_de_draws[i]["graphic_provide"] = user.username
     return JsonResponse({'d_ib_draws': d_de_draws})
 
-
 def login_page(request):
     return render(request,"index_new.html",{"status":True})
+
+
+def new_password_reset(request):
+    username=request.POST.get("username",False)
+    user=User.objects.get(username=username)
+    user.set_password("12345678")
+    user.save()
+    return HttpResponse("success")
+
+def locate(request):
+    location=request.POST.get("location",False)
+    req = urllib2.Request(url)
+    dic={"keyWord":location}
+    response = urllib.request.urlopen("http://api.tianditu.com/geocoder?ds="+dic)
+    real_location= json.loads(json.loads(response.read().decode('utf-8'))['location'])
+    return JsonResponse({"location":real_location})
+
+

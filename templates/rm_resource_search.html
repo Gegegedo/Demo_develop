@@ -11,6 +11,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>资源查询</title>
+    <link href="{% static 'css/yds/base.css'  %}" rel="stylesheet" >
+    <script src="{% static 'js/yds/base.js' %}"></script>
     <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.js' %}"></script>
     <script src="{% static 'js/bootstrap-table.min.js' %}"></script>
@@ -44,6 +46,34 @@
         .operate {
             margin-left:10px;
         }
+        table{
+            text-align: center;
+            width:90%;
+            margin-left:5%;
+            font-size:.15rem;
+        }
+        table td{
+            height:.7rem;
+        }
+        table td:nth-child(1){
+            width:100px;
+        }
+        table td:nth-child(2){
+            width:400px;
+        }
+        table td:nth-child(3){
+            width:200px;
+        }
+        table td:nth-child(4){
+            width:400px;
+        }
+        table td:nth-child(5){
+            width:200px;
+        }
+        table td:nth-child(6){
+            width:200px;
+        }
+
     </style>
 </head>
 <body style="height:100%">
@@ -64,7 +94,7 @@
                         </div>
                         <div style="width:7%">
                             <span style="height:100%; display:-webkit-flex; align-items:center; width:100%;">
-                                <button class="btn btn-primary" style="border-radius:6px; height:50%; width:100%; min-height:34px; font-size:14px" id="search_btn" ><img src="{% static 'img/search.png' %}" style="padding-left:5px;">搜索</button>
+                                <button class="btn btn-primary"  id="search_btn" ><img src="{% static 'img/search.png' %}" style="padding-left:5px;">搜索</button>
                             </span>
                             <script>
 
@@ -81,12 +111,58 @@
         <div class="row" style="width:100%; height:100%;">
             <div class="col-xs-12 col-lg-12" style="height:100%">
                 <div id="list-search-result" style="width:95%;margin-left:15px;">
-                    <table id="resource_tab" border="0" cellspacing="0" cellpadding="0" class="table"></table>
-                    <p>{{message}}</p>
+                    <!--<table id="resource_tab" border="0" cellspacing="0" cellpadding="0" class="table"></table>-->
+                    <!--<p>{{message}}</p>-->
                 </div>
             </div>
         </div>
     </div>
+    <table border="1px solid black">
+            <tr>
+                <td>序号</td>
+                <td>影像资源</td>
+                <td>入库时间</td>
+                <!--<td>卫星</td>-->
+                <td>影像类别</td>
+                <td>下载次数</td>
+                <td>操作</td>
+                <!--<td>录入时间</td>-->
+                <!--<td>操作</td>-->
+            </tr>
+            <tr class="trr1" style="display:none">
+                <td>1</td>
+                <td>yaogan:geotiff_coverage</td>
+                <td>2017.8</td>
+                <td>高分二号卫星</td>
+                <td>646次</td>
+                <td>
+                    <div class="ht3" style="float:left;margin-left:.5rem;"><img class="htt3" style="width:100%" src="../static/img/check.png" alt=""></div>
+                    <div class="ht4" style="float:right;margin-right:.5rem;"><img class="htt4" style="width:100%" src="../static/img/delete.png" ></div>
+                </td>
+            </tr>
+            <tr class="trr2" style="display:none">
+                <td>2</td>
+                <td>yaogan:geotiff_coverage2</td>
+                <td>2017.5</td>
+                <td>高分二号卫星</td>
+                <td>125次</td>
+                <td>
+                    <div class="ht1" style="float:left;margin-left:.5rem;"><img class="htt1" style="width:100%" src="../static/img/check.png" alt=""></div>
+                    <div class="ht2" style="float:right;margin-right:.5rem;"><img class="htt2" style="width:100%" src="../static/img/delete.png" ></div>
+                </td>
+            </tr>
+        <tr class="trr3" style="display:none">
+                <td>3</td>
+                <td>yaogan:geotiff_coverage3</td>
+                <td>2017.3</td>
+                <td>高景一号卫星</td>
+                <td>103次</td>
+                <td>
+                    <div class="ht5" style="float:left;margin-left:.5rem;"><img class="htt5" style="width:100%" src="../static/img/check.png" alt=""></div>
+                    <div class="ht6" style="float:right;margin-right:.5rem;"><img class="htt6" style="width:100%" src="../static/img/delete.png" ></div>
+                </td>
+            </tr>
+        </table>
 
     <!--<div id="globe-search-result"></div>-->
     <!--<div id="list-search-result" style="width:95%">-->
@@ -96,11 +172,134 @@
     <!--<div class="col-xs-0 col-lg-0"></div>-->
     <!--<footer></footer>-->
     <script >
-        $.ajaxSetup({
-            data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
-        });
+        <!--$.ajaxSetup({-->
+            <!--data: {csrfmiddlewaretoken: '{{ csrf_token }}' },-->
+        <!--});-->
+        $(".ht1").mouseenter(function(){
+                 $(".htt1").attr("src","../static/img/check1.png")
+            })
+            $(".ht1").mouseout(function(){
+                 $(".htt1").attr("src","../static/img/check.png")
+            })
+            $(".ht2").mouseenter(function(){
+                 $(".htt2").attr("src","../static/img/delete1.png")
+            })
+            $(".ht2").mouseout(function(){
+                 $(".htt2").attr("src","../static/img/delete.png")
+            })
+
+
+            $(".ht3").mouseenter(function(){
+                 $(".htt3").attr("src","../static/img/check1.png")
+            })
+            $(".ht3").mouseout(function(){
+                 $(".htt3").attr("src","../static/img/check.png")
+            })
+            $(".ht4").mouseenter(function(){
+                 $(".htt4").attr("src","../static/img/delete1.png")
+            })
+            $(".ht4").mouseout(function(){
+                 $(".htt4").attr("src","../static/img/delete.png")
+            })
+
+
+
+            $(".ht5").mouseenter(function(){
+                 $(".htt5").attr("src","../static/img/check1.png")
+            })
+            $(".ht5").mouseout(function(){
+                 $(".htt5").attr("src","../static/img/check.png")
+            })
+            $(".ht6").mouseenter(function(){
+                 $(".htt6").attr("src","../static/img/delete1.png")
+            })
+            $(".ht6").mouseout(function(){
+                 $(".htt6").attr("src","../static/img/delete.png")
+            })
+
+            $(".htt1").mouseenter(function(){
+                 $(".htt1").attr("src","../static/img/check1.png")
+            })
+            $(".htt1").mouseout(function(){
+                 $(".htt1").attr("src","../static/img/check.png")
+            })
+            $(".htt2").mouseenter(function(){
+                 $(".htt2").attr("src","../static/img/delete1.png")
+            })
+            $(".htt2").mouseout(function(){
+                 $(".htt2").attr("src","../static/img/delete.png")
+            })
+
+
+            $(".htt3").mouseenter(function(){
+                 $(".htt3").attr("src","../static/img/check1.png")
+            })
+            $(".htt3").mouseout(function(){
+                 $(".htt3").attr("src","../static/img/check.png")
+            })
+            $(".htt4").mouseenter(function(){
+                 $(".htt4").attr("src","../static/img/delete1.png")
+            })
+            $(".htt4").mouseout(function(){
+                 $(".htt4").attr("src","../static/img/delete.png")
+            })
+
+
+
+            $(".htt5").mouseenter(function(){
+                 $(".htt5").attr("src","../static/img/check1.png")
+            })
+            $(".htt5").mouseout(function(){
+                 $(".htt5").attr("src","../static/img/check.png")
+            })
+            $(".htt6").mouseenter(function(){
+                 $(".htt6").attr("src","../static/img/delete1.png")
+            })
+            $(".htt6").mouseout(function(){
+                 $(".htt6").attr("src","../static/img/delete.png")
+            })
+
+
+
+
+
+            $(".ht2").click(function(){
+                $(".trr2").css("display","none");
+            })
+            $(".ht4").click(function(){
+                $(".trr1").css("display","none");
+            })
+            $(".ht6").click(function(){
+                $(".trr3").css("display","none");
+            })
+            $(".btn").click(function(){
+                $(".trr1").css("display","table-row");
+                $(".trr2").css("display","table-row");
+            })
+
+        $(".btn").click(function(){
+            var select = document.getElementsByClassName("search-input")[0];
+            var value = select.value;
+            var options = select.options;
+            var value1 = options[0].value;
+            var text1 = options[0].text;
+            var index = select.selectedIndex;
+            var selectedText = options[index].text;
+            console.log(selectedText);
+            if(selectedText=="高分二号"){
+                $(".trr1").css("display","table-row");
+                $(".trr2").css("display","table-row");
+                $(".trr3").css("display","none");
+            }
+            else if(selectedText=="高景一号"){
+                $(".trr1").css("display","none");
+                $(".trr2").css("display","none");
+                $(".trr3").css("display","table-row");
+            }
+        })
+
     </script>
 
-    <script src="{% static 'js/resourceManagement.js' %}"></script>
+    <!--<script src="{% static 'js/resourceManagement.js' %}"></script>-->
 </body>
 </html>

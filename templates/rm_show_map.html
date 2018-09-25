@@ -84,10 +84,9 @@
             }
         }));
 
-        var coordinate = ol.proj.fromLonLat([y,x]);
+        var coordinate = ol.proj.fromLonLat([39.1617,117.2103]);
         overlay.setPosition(coordinate);
         map.addOverlay(overlay);
-
         var container2 = document.getElementById('imagePath');
         container.onclick=function(){
             //map.removeOverlay(overlay);
@@ -101,7 +100,7 @@
                     duration: 250   //当Popup超出地图边界时，为了Popup全部可见，地图移动的速度.
                 }
             }));
-            var coordinate = ol.proj.fromLonLat([y+1,x-1]);
+            var coordinate = ol.proj.fromLonLat([117.1445,39.1862]);
             overlay2.setPosition(coordinate);
             map.addOverlay(overlay2);
         };

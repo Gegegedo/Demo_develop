@@ -1,137 +1,48 @@
-<!doctype html>
-<html lang="en" style="height:100%">
- <head>
+<!DOCTYPE html>
+<html>
+<head>
      {% load staticfiles %}
-     <link href="{% static 'css/bootstrap.css'  %}" rel="stylesheet" >
-     <link href="{% static 'css/bootstrap-theme.css' %}"  rel="stylesheet">
+    <title>电子沙盘</title>
+    {% load staticfiles %}
+    <script src="{% static 'js/openlayers_v4.5.0/build/ol.js' %}"></script>
+    <script src="{% static 'js/geomap.js' %}"></script>
+    <script src="{% static 'js/openlayers_v4.5.0/build/ol.js' %}"></script>
+    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/ol.css' %}">
+    <link href="{% static 'css/bootstrap.css'  %}" rel="stylesheet" >
+    <link href="{% static 'css/bootstrap-theme.css' %}"  rel="stylesheet">
     <!--<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css">-->
     <!--<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.min.css">-->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<link rel="stylesheet" href="{% static 'js/openlayers_v4.5.0/css/ol.css' %}" type="text/css">-->
+    <script src="{% static 'js/openlayers_v4.5.0/build/ol.js' %}"></script>
     <!--[if lt IE 9]>
-    <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <script >
-        $.ajaxSetup({
-             data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
-        });
-    </script>
+    <script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script>
     <![endif]-->
+
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>-->
+    <script src="{% static 'js/common.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/yds/base.css' %}">
+    <script src="{% static 'js/yds/base.js' %}"></script>
+     <script >
+
+    </script>
+    <!--<script src="{% static 'js/html2canvas.min.js' %}"></script>-->
+    <!--<script src="{% static 'js/canvas2image.js' %}"></script>-->
     <style>
-        .nav-tabs li {
-            height:100%;
-            border-radius: 10px 10px 0 0;
-            background: #e6e7ea;
+        body{
+            overflow: hidden;
         }
-        .nav-tabs li a {
+        html,body,.map{
+            width: 100%;
             height: 100%;
-            text-align:center;
-            display:-webkit-flex;
-            align-items:center;
-            font-size:2.5rem;
-            color:#8a8a8a;
-        }
-        .nav-tabs li a:hover {
-            color: #3178f5;
-            background:#ffffff;
-        }
-        .nav-img-p {
-            height:100%;
-            padding-right:10px;
-        }
-        .nav-img {
-            height:80%;
-        }
-        .picture-span {
-            color:#666666;
-            width:7%;
-            min-width:100px;
-            text-align:center;
-        }
-        .picture-date {
-            height:100%;
-            min-width:185px;
-            width:13%;
-            display:-webkit-flex;
-            align-items:center;
-        }
-        .compare-input {
-            height:50%;
-            min-height:50px;
-        }
-        .compare-but {
-            height: 50%;
-            width:100%;
-            border-radius:4px;
-            font-size:20px;
-            min-height:50px;
-            display:-webkit-flex;
-            align-items:center;
-        }
-        .function-but {
-            width:80px;
-            margin-top:2px;
+            position:absolute;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
         }
         .map {
-            height: 100%;
-            width: 100%;
-        }
-
-        .ol-rotate {
-            right:100px;
-
-        }
-
-
-
-        .ol-scale-line {
-            bottom:80px;
-
-        }
-
-
-
-        #menu {
-            float: left;
-            position: absolute;
-            top: 300px;
-
-            z-index: 2000;
-        }
-         /**
-        * 提示框的样式信息
-        */
-        .tooltip {
-            position: relative;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 4px;
-            color: white;
-            padding: 4px 8px;
-            opacity: 0.7;
-            white-space: nowrap;
-        }
-
-        .tooltip-measure {
-            opacity: 1;
-            font-weight: bold;
-        }
-
-        .tooltip-static {
-            background-color: #ffffff;
-            color: black;
-            border: 1px solid white;
-        }
-
-        .tooltip-measure:before,
-        .tooltip-static:before {
-            border-top: 6px solid rgba(0, 0, 0, 0.5);
-            border-right: 6px solid transparent;
-            border-left: 6px solid transparent;
-            content: "";
-            position: absolute;
-            bottom: -6px;
-            margin-left: -7px;
-            left: 50%;
+            overflow-y:auto;
         }
 
         .tooltip-static:before {
@@ -165,6 +76,7 @@
             margin-top: 10px;
             color: #999999;
         }
+
         #ib_map_compare a, #ib_image_compare a {
             border-radius:0.2em;
             display:table;
@@ -187,190 +99,199 @@
             background:#0a86e1;
             color:white
         }
+         /**
+        * 提示框的样式信息
+        */
+        .tooltip {
+            position: relative;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            color: white;
+            padding: 4px 8px;
+            opacity: .7;
+            white-space: nowrap;
+        }
+
+        .tooltip-measure {
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        .tooltip-static {
+            background-color: #ffffff;
+            color: black;
+            border: 1px solid white;
+        }
+
+        .tooltip-measure:before,
+        .tooltip-static:before {
+            border-top: 6px solid rgba(0, 0, 0, 0.5);
+            border-right: 6px solid transparent;
+            border-left: 6px solid transparent;
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            margin-left: -7px;
+            left: 50%;
+        }
+
+        .tooltip-static:before {
+            border-top-color: #ffffff;
+        }
+        .dzspbtn{
+            width:.8rem;
+            height:.4rem;
+            border-radius:.04rem;
+            border:1px solid #d1d1d3;
+            background:white;
+            color:#717274;
+            font-size:.15rem;
+        }
+        .yy-as{
+            width:.8rem;
+            position:fixed;
+            overflow:hidden;
+            right:.2rem;
+            top:.2rem;
+            color:white;
+            min-height:10px;
+            height:.3rem;
+            background:#0f87f0;
+            font-size:.12rem;
+            float:right;
+            min-width:120px;
+            border-radius:5px;
+            padding-right:.1rem;
+
+        }
+        .yy-n1{
+            float:left;
+            height:.15rem;
+            margin-top:.075rem;
+            margin-left:.05rem;
+        }
+        .dingweishuang{
+            position:fixed;
+            top:1rem;
+            right:.5rem;
+        }
+        .fix{
+            position:fixed;
+            left:1rem;
+            top:.61rem;
+            width:2rem;
+            background:white;
+            font-size:.15rem;
+            opacity:.5;
+            color:black;
+        }
+        .mjxx{
+            width:1rem;
+            float:left;
+        }
+        .chosetime{
+            font-size:.18rem;
+            width:1rem;
+            height:.4rem;
+            line-height:.4rem;
+        }
+        .row{
+             margin-top:.1rem;
+             width: 96%;
+             margin-left:3%;
+             display:-webkit-flex;
+             align-items:center;
+             height:100%;
+             height:.4rem;
+        }
+        .compare-input{
+             width: 1rem;
+             height:.4rem;
+
+        }
+        .makesure{
+            width:.8rem;
+            height:.4rem;
+            margin-left:.2rem;
+            background:#0090ff;
+            color:white;
+            border-radius:5px;
+            font-size:.15rem;
+        }
+        .xl0{
+            margin-left:.2rem;
+        }
+        .download{
+            height:.3rem;
+            line-height:.3rem;
+            font-size:.1rem;
+        }
+        .container{
+            width:94%;
+            margin-left:0;
+             height:87%;
+        }
+        .map{
+            visibility:hidden;
+            opacity:.9
+        }
+        #map{
+             visibility:visible;
+        }
     </style>
+</head>
+<body>
+    <div class="compare container" style="width:100%; height:10%;">
+        {% csrf_token %}
+        <div class="row">
+                    <span class="chosetime">时间选择:</span>
 
-   <script src="{% static 'js/jquery-1.8.2.min.js' %}"></script>
-   <script>
-       $.ajaxSetup({
-           data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
-       });
-   </script>
-    <link rel="stylesheet" href="{% static 'js/openlayers_v4.5.0/css/ol.css' %}" type="text/css">
-    <script src="{% static 'js/openlayers_v4.5.0/build/ol.js' %}"></script>
-     <script src="{% static 'js/require.js' %}"></script>
-   <script src="{% static 'js/geomap.js' %}"></script>
-   <!-- <script src="{% static 'js/baidumap.js' %}"></script> -->
-   <script src="{% static 'js/load_draw.js' %}"></script>
-   <script src="{% static 'js/select_draw.js' %}"></script>
- </head>
-
- <body style="height:100%;">
-    <div class="compare container" style="background-color:white; display:inline-flex; width:100%; height:8%; min-height:100px">
-        <div role="form" name="compareForm" action="" method="post" style="width:100%; font-size:20px; height:100%">
-            <div class="row" style="width: 100%; display:-webkit-flex; align-items:center; height:100%;">
-                <div class="col-lg-11 col-xs-11" style="display:inline-flex; align-items:center; height:100%">
-                    <span class="picture-span">影像选择</span>
-                    <select type="text" class="compare-input" id="imagery" style="width: 15%;">
-                          <option>请选择影像</option>
+                    <a href="{% static 'baogao/资源分类.pdf' %}" class="yy-as" download ><img src="{% static 'img/baogao.png' %}" class="yy-n1"><p class="download">生成报告</p></a>
+                    <select type="text" class="compare-input" id="imagery">
+                          <option selected="selected">2018.4</option>
                     </select>
-                    <span class="picture-span" style="padding-left: 10%;width: auto;">地上物类型：</span>
-                    <select type="text" class="compare-input" id="type" style="width: 10%;">
-                          <option>全貌</option>
-                          <option>建筑</option>
-                          <option>道路</option>
-                          <option>水域</option>
-                          <option>草地</option>
-                          <option>林地</option>
-                          <option>耕地</option>
-                          <option>大棚</option>
-                    </select>
-                    <span style="height:100%; display:-webkit-flex; align-items:center; width:7%; margin-left:42px;">
-                        <button class="btn btn-primary" style="border-radius:6px; height:50%; width:100%; min-height:50px; font-size:20px" id="location_btn" >确定</button>
-                    </span>
-                    <script>
-                        selection=document.getElementById("imagery");
-                        $.ajax({
-                                type:'get',
-                                url:'/_map_inquiry/',
-                                data: {
-                                },
-                                success:function(d_maps){
-                                    maps=JSON.parse(d_maps);
-                                    for(m in maps){
-                                        name=maps[m].name;
-                                        var area=maps[m].Area;
-                                        var time=maps[m].ReceiveTime;
-                                        id=maps[m].GlobeID;
-                                        selection.add(new Option(area+time,id))
-                                    }
-                                }
-                             });
+                    <button class="makesure" style="">确定</button>
+                    <div class="dzspallbtn">
+                    <button class="dzspbtn xl0">一张图</button>
+                    <button class="dzspbtn xl1">建筑</button>
+                    <button class="dzspbtn xl2">农田</button>
+                    <button class="dzspbtn xl3">大棚</button>
+                    <button class="dzspbtn xl4">水域</button>
+                    <button class="dzspbtn xl5">森林</button>
+                    <button class="dzspbtn xl6">道路</button>
+                    <button class="dzspbtn xl7">草地</button>
+                    </div>
 
-                        var button_compare=$("#location_btn");
-                        button_compare.click(function(){
-                            var index = selection.selectedIndex;
-                            var text = selection.options[index].text;
-                            var value = selection.options[index].value;
 
-                            for(m in maps){
-                                id=maps[m].GlobeID;
-                                if(id==value){
-                                    cord_x=(maps[m].TopLeftLongitude+maps[m].TopRightLongitude)/2.0;
-                                    cord_y=(maps[m].TopLeftLatitude+maps[m].BottomLeftLatitude)/2.0;
-                                    var location=ol.proj.fromLonLat([cord_x,cord_y]);
-                                    map.getView().animate({center:location});
-                                }
-                            }
 
-                            temp_layer = new ol.layer.Image({
-                                source: new ol.source.ImageWMS({
-                                    crossOrigin: 'anonymous',
-                                    url:'http://172.20.53.158:8080/geoserver/wms',
-                                    projection:'EPSG:4326',
-                                    params:{
-                                    LAYERS: value.toString()}
-                                }),
-                                projection: "EPSG:4326",
-                               // opacity:0.5,
-                            });
-                            map.addLayer(temp_layer);
-                        });
-                    </script>
-                </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="image" style="width:100%; height:100%">
+            <div class="col-lg-11 col-xs-11" style="height:100%">
+                <div id="map" class="map" ></div>
+                <div id="map_2" class="map "></div>
+                <div id="map_3" class="map "></div>
+                <div id="map_4" class="map "></div>
+                <div id="map_5" class="map "></div>
+                <div id="map_6" class="map "></div>
+                <div id="map_7" class="map "></div>
+                <div id="map_8" class="map "></div>
+                <div id="map_9" class="map "></div>
+                <div id="popup" class="ol-popup" style=" display:none">
+                <div id="popup_button"></div>
             </div>
         </div>
     </div>
-    <div class="container" style="width:100%; height:92%; overflow-y:auto">
-        <div class="row" style="width:100%; height:100%">
-            <div class="col-lg-11 col-xs-11" style="height:100%">
-                <div id="map" class="map" style="width:100%; height:95%">
-                </div>
-                <div id="popup" class="ol-popup" style=" display:none">
-                    <div id="popup-content" style="width:300px;">
-                        <div role="form" name="indexForm"  style="background-color:white; text-align:center;  border-radius:6px;">
-                            {% csrf_token %}
-                             <h5 style="font-size:18px; height:30px; line-height:30px;">请输入违建或拆迁信息</h5>
-                             <div class="input-div">
-                                    <p class="input-span">名称：</p>
-                                    <input id="name" type="text" class="form-input" placeholder="请输入名称"/>
-                             </div>
-                             <div class="input-div">
-                                  <p clss="type_select">
-                                      <p class="input-span">地上物类型：</p>
-                                      <select id="graphictype" class="selectpicker">
-                                          <option>建筑</option>
-                                          <option>道路</option>
-                                          <option>水域</option>
-                                          <option>草地</option>
-                                          <option>林地</option>
-                                          <option>耕地</option>
-                                          <option>大棚</option>
-                                          <option>其他</option>
-                                      </select>
-                                  </p>
-                             </div>
-                            <div class="input-div">
-                                <p clss="type_select">
-                                    <p class="input-span">类型：</p>
-                                    <select id="graphiclabel" class="selectpicker">
-                                        <option>违建</option>
-                                        <option>疑似违建</option>
-                                    </select>
-                                </p>
-                            </div>
-                            <div class="input-div">
-                                <p class="input-span">描述：</p>
-                                <input id="discrib"  type="text" class="form-input"  placeholder="请输入描述信息" />
-                            </div>
-                            <div class="input-div">
-                                <p class="input-span">面积：</p>
-                                <input id="square"  class="form-input"  placeholder="请输入面积" />
-                            </div>
-                            <div class="input-div">
-                                <p class="input-span">录入时间：</p>
-                                <input type="date" id="foundtime"  class="form-control compare-input"/>
-                            </div>
-                            <div class="input-div">
-                                <p class="input-span">现场地址：</p>
-                                <input id="graphicaddress"  class="form-input"  placeholder="请输入现场地址" />
-                            </div>
-                            <div style="text-align: center; padding-bottom:10px;display: -webkit-flex;align-items: center;">
-                                    <div style="width: 50%;text-align: left;margin-left: 65px;">
-                                        <button id="save_submit" class="btn btn-primary" style="width: 70px;background: #0090ff;">保存</button>
-                                    </div>
-                                <div style="width: 50%;text-align: left;margin-left: 65px;">
-                                        <button id="save_update" class="btn btn-primary" style="width: 70px;background: #0090ff;">更改</button>
-                                    </div>
-                                    <div style="width: 50%;text-align: left;margin-right: 65px;">
-                                        <button id="save_cancel" class="btn btn-primary" style="width: 70px;background: #0090ff;">取消</button>
-                                    </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div id="popup_info" style="background-color:white;border-radius:5px;width: 150%;display:none;">
-                    <p><b>面积&#8195</b><font id="popup_info_square">000</font></p>
-                    <span style="float:right;  padding-right:10px;"><img id="close_login" src="{% static 'img/close.png' %}"></span>
-                    <p><b>类型&#8195</b><font id="popup_info_type">000</font></p>
-                    <p><b>位置&#8195</b><font id="popup_info_address">000</font></p>
-                    <p><b>时间&#8195</b><font id="popup_info_time">000</font></p>
-
-                </div>
-                <div id="popup_button"></div>
-            </div>
-
-            <div class="col-lg-1 col-xs-1" style="height:100%; text-align:center; font-size:20px;">
-                <div style="height:100%; width:100%; margin-to:50%;">
-                    <!--<div class="img_download" style="width:100%; height:50%; color:#0090ff">-->
-                    <ul class="map_image_compare" style="white-space: nowrap;width: 200%;padding-left: 0;">
+        <span class="fix"><p style="float:left">总面积：</p><br><br><p class="mjxx">0</p><p style="float:right">平方公里</p></span>
+    <ul class="map_image_compare dingweishuang" style="white-space: nowrap;width: .7rem;padding-left: 0;min-width:60px;">
                         <li class="compare-but" id="ib_map_compare" style="list-style-type:none">
                             <a id="ib_map_a" href="javascript:void(0)">
                                 <img src="{% static 'img/map.png' %}" style="padding-left:5px;width:50%;">
                                 <p class="map_compare_span" style="width:50%;margin:0 0 0 0;">地图</p>
                             </a>
                         </li>
-                        <li class="compare-but" id="ib_image_compare" style="margin-top:10%;list-style-type:none">
+                        <li class="compare-but" id="ib_image_compare" style="list-style-type:none;margin-top:10px;">
                             <a id="ib_image_a" href="javascript:void(0)">
                                 <img src="{% static 'img/vedio.png' %}" style="padding-left:5px;width:50%;">
                                 <p class="image_compare_span" style="width:50%;margin:0 0 0 0;">影像</p>
@@ -422,125 +343,555 @@
                         </script>
                     </ul>
 
-     <a class="down" id="image_download" onmouseout="restore1()" onmouseover="change1()"> <div  style="margin-top:150%"><img id="img1" style="width:50%;" src="{% static 'img/image_download.png' %}"></div>
-                       <div  id="image_download1" style="color:#999999">影像下载</div>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
-                        <script>
-                        //下载影像图片
-                            download_button=$("#image_download");
-                            download_button.click(download);
-                            function download(){
-                                map.once('postcompose', function(event) {
-                                  var canvas = event.context.canvas;
-                                  if (navigator.msSaveBlob) {
-                                    navigator.msSaveBlob(canvas.msToBlob(), 'map.png');
-                                  } else {
-                                    canvas.toBlob(function(blob) {
-                                      saveAs(blob, 'map.png');
-                                    });
-                                  }
-                                });
-                                map.renderSync();
-                            }
-                        </script>
-                    </a>
-                    <a>
-                    <div style="margin-top:52px; cursor:pointer;" id="ib_plotting" >
-                        <div><img id="img2" style="width:50%" src="{% static 'img/measure.png' %}"></div>
-                        <div id ="plotting_id" style="color:#999999">量标</div>
+    <script src="{% static 'js/geomap.js' %}"></script>
+    <script type="text/javascript">
+   var map = new ol.Map({
+   target: 'map',
+   view: new ol.View({
+     center: ol.proj.fromLonLat([117.2027, 39.1653]),
+     zoom: 12,
+     maxZoom:18,
+     minZoom:4
+   }),
+   controls: ol.control.defaults().extend([
+        new ol.control.ScaleLine({  }),
+        new ol.control.MousePosition({
+            coordinateFormat: ol.coordinate.createStringXY(4),
+            projection: 'EPSG:4326'
+        }),
+        new ol.control.ScaleLine({  }),
+        new ol.control.ZoomSlider({
+            maxResolution:1000,
+            minResolution:1000
+        })
+  ]),
+ });
+temp_layer0 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "yaogan:geotiff_coverageditu"}
+            }),
+                    projection: "EPSG:4326",
+                });
+var fullScreen=new ol.control.FullScreen();//openlayer 3 仅支持IE最新版本（IE 11+）
+map.addControl(fullScreen);
+map.addLayer(default_geo_layer2);
+map.addLayer(default_geo_layer4);
+map.render();
+var map_2 = new ol.Map({
+    target:"map_2",
+    view:map.getView()
+});
+var map_3 = new ol.Map({
+    target:"map_3",
+    view:map.getView()
+});
+var map_4 = new ol.Map({
+    target:"map_4",
+    view:map.getView()
+});
+var map_5 = new ol.Map({
+    target:"map_5",
+    view:map.getView()
+});
+var map_6 = new ol.Map({
+    target:"map_6",
+    view:map.getView()
+});
+var map_7 = new ol.Map({
+    target:"map_7",
+    view:map.getView()
+});
+var map_8 = new ol.Map({
+    target:"map_8",
+    view:map.getView()
+});
+var map_9 = new ol.Map({
+    target:"map_9",
+    view:map.getView()
+});
+var map1=$("#map");
+var map2=$("#map_2");
+var map3=$("#map_3");
+var map4=$("#map_4");
+var map5=$("#map_5");
+var map6=$("#map_6");
+var map7=$("#map_7");
+var map8=$("#map_8");
+var map9=$("#map_9");
+temp_layer1 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "geotiff_coveragejianzhu"}
+            }),
+                    projection: "EPSG:4326",
+                });
+                temp_layer2 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "geotiff_coveragelindi"}
+            }),
+                    projection: "EPSG:4326",
+                });
+temp_layer3 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "geotiff_coveragecaodi"}
+            }),
+                    projection: "EPSG:4326",
+                });
+  temp_layer4 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "geotiff_coveragedapeng"}
+            }),
+                    projection: "EPSG:4326",
+                });
+  temp_layer5 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "geotiff_coveragedaolu"}
+            }),
+                    projection: "EPSG:4326",
+                });
+  temp_layer6 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "geotiff_coveragetiandi"}
+            }),
+                    projection: "EPSG:4326",
+                });
+  temp_layer7 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "geotiff_coveragelabel"}
+            }),
+                    projection: "EPSG:4326",
+                });
+  temp_layer8 = new ol.layer.Image({
+        source: new ol.source.ImageWMS({
+            <!--crossOrigin: 'anonymous',-->
+                url:'http://localhost:8081/geoserver/wms',
+                projection:'EPSG:4326',
+                params:{
+                LAYERS: "geotiff_coverageshuiyu"}
+            }),
+                    projection: "EPSG:4326",
+                });
+                map_2.addLayer(temp_layer0);
+                map_2.addLayer(temp_layer1);
+                map_3.addLayer(temp_layer0);
+                map_3.addLayer(temp_layer2);
+                map_4.addLayer(temp_layer0);
+                map_4.addLayer(temp_layer3);
+                map_5.addLayer(temp_layer0);
+                map_5.addLayer(temp_layer4);
+                map_6.addLayer(temp_layer0);
+                map_6.addLayer(temp_layer5);
+                map_7.addLayer(temp_layer0);
+                map_7.addLayer(temp_layer6);
+                map_8.addLayer(temp_layer0);
+                map_8.addLayer(temp_layer7);
+                map_9.addLayer(temp_layer0);
+                map_9.addLayer(temp_layer8);
+    $(".xl1").click(function(){
+        <!--var mjxx = document.getElementsByClassName(".mjxx")[0];-->
+        var huayuan = ol.proj.fromLonLat([(117.39372),(39.15034)]);
+        map2.show();
+        map3.hide();
+        map4.hide();
+        map5.hide();
+        map6.hide();
+        map7.hide();
+        map8.hide();
+        map9.hide();
+    map2.css("visibility","visible");
+    map3.css("visibility","none");
+    map4.css("visibility","none");
+    map5.css("visibility","none");
+    map6.css("visibility","none");
+    map7.css("visibility","none");
+    map8.css("visibility","none");
+    map9.css("visibility","none");
+     map_2.getView().animate({
+      center:huayuan,
+      duration: 2000,
+      zoom:11
+    });
+    $(".xl1").css("background","#3178f5");
+            $(".xl1").css("color","white");
+            $(".xl2").css("background","white");
+            $(".xl2").css("color","#8a8a8a");
+            $(".xl3").css("background","white");
+            $(".xl3").css("color","#8a8a8a");
+            $(".xl4").css("background","white");
+            $(".xl4").css("color","#8a8a8a");
+            $(".xl5").css("background","white");
+            $(".xl5").css("color","#8a8a8a");
+            $(".xl6").css("background","white");
+            $(".xl6").css("color","#8a8a8a");
+            $(".xl7").css("background","white");
+            $(".xl7").css("color","#8a8a8a");
+            $(".xl0").css("background","white");
+            $(".xl0").css("color","#8a8a8a");
+            var a1 = $(".mjxx").text();
+            console.log(a1)
+            $(".mjxx").text(51.37452);
+    });
+    $(".xl5").click(function(){
+        var huayuan = ol.proj.fromLonLat([(117.39372),(39.15034)]);
+        map3.show();
+        map2.hide();
+        map4.hide();
+        map5.hide();
+        map6.hide();
+        map7.hide();
+        map8.hide();
+        map9.hide();
+    map3.css("visibility","visible");
+    map2.css("visibility","none");
+    map4.css("visibility","none");
+    map5.css("visibility","none");
+    map6.css("visibility","none");
+    map7.css("visibility","none");
+    map8.css("visibility","none");
+    map9.css("visibility","none");
+     map_3.getView().animate({
+      center:huayuan,
+      duration: 2000,
+      zoom:11
+    });
+    $(".xl5").css("background","#3178f5");
+            $(".xl5").css("color","white");
+            $(".xl1").css("background","white");
+            $(".xl1").css("color","#8a8a8a");
+            $(".xl3").css("background","white");
+            $(".xl3").css("color","#8a8a8a");
+            $(".xl2").css("background","white");
+            $(".xl2").css("color","#8a8a8a");
+            $(".xl4").css("background","white");
+            $(".xl4").css("color","#8a8a8a");
+            $(".xl6").css("background","white");
+            $(".xl6").css("color","#8a8a8a");
+            $(".xl7").css("background","white");
+            $(".xl7").css("color","#8a8a8a");
+            $(".xl0").css("background","white");
+            $(".xl0").css("color","#8a8a8a");
+            var a1 = $(".mjxx").text();
+            console.log(a1)
+            $(".mjxx").text(1.137915);
+    });
+    $(".xl7").click(function(){
+        var huayuan = ol.proj.fromLonLat([(117.39372),(39.15034)]);
+        map4.show();
+        map2.hide();
+        map3.hide();
+        map5.hide();
+        map6.hide();
+        map7.hide();
+        map8.hide();
+        map9.hide();
+    map4.css("visibility","visible");
+    map2.css("visibility","none");
+    map3.css("visibility","none");
+    map5.css("visibility","none");
+    map6.css("visibility","none");
+    map7.css("visibility","none");
+    map8.css("visibility","none");
+     map9.css("visibility","none");
+     map_4.getView().animate({
+      center:huayuan,
+      duration: 2000,
+      zoom:11
+    });
+    $(".xl7").css("background","#3178f5");
+            $(".xl7").css("color","white");
+            $(".xl1").css("background","white");
+            $(".xl1").css("color","#8a8a8a");
+            $(".xl3").css("background","white");
+            $(".xl3").css("color","#8a8a8a");
+            $(".xl2").css("background","white");
+            $(".xl2").css("color","#8a8a8a");
+            $(".xl5").css("background","white");
+            $(".xl5").css("color","#8a8a8a");
+            $(".xl6").css("background","white");
+            $(".xl6").css("color","#8a8a8a");
+            $(".xl4").css("background","white");
+            $(".xl4").css("color","#8a8a8a");
+            $(".xl0").css("background","white");
+            $(".xl0").css("color","#8a8a8a");
+            var a1 = $(".mjxx").text();
+            console.log(a1)
+            $(".mjxx").text(8.4697);
+    });
+    $(".xl2").click(function(){
+    var huayuan = ol.proj.fromLonLat([(117.39372),(39.15034)]);
+        map7.show();
+        map2.hide();
+        map3.hide();
+        map5.hide();
+        map6.hide();
+        map4.hide();
+        map8.hide();
+        map9.hide();
+    map7.css("visibility","visible");
+    map2.css("visibility","none");
+    map8.css("visibility","none");
+    map3.css("visibility","none");
+    map5.css("visibility","none");
+    map6.css("visibility","none");
+    map4.css("visibility","none");
+    map9.css("visibility","none");
+     map_7.getView().animate({
+      center:huayuan,
+      duration: 2000,
+      zoom:11
+    });
 
-                         <script>
-                            var clicked=false;
-                            $("#ib_plotting").bind("mouseenter",change2);
-                            $("#ib_plotting").bind("mouseleave",restore2);
-                            $("#ib_plotting").click(function(){
-                                if (clicked) {
-                                    var path1="{% static 'img/measure.png' %}";
-                                    $("#plotting_menu").css("display","none");
-                                    $("#plotting_id").html("标量");
-                                    $("#img2").attr("src",path1);
-                                    $("#plotting_id").css("color","#999999");
-                                     $("#ib_plotting").bind("mouseenter",change2);
-                                     $("#ib_plotting").bind("mouseleave",restore2);
-                                    clicked=false;
-                                }else{
-                                    var path2="{% static 'img/measure11.png' %}"
-                                    $("#plotting_menu").css("display","inline");
-                                    $("#plotting_id").html("取消标量");
-                                    $("#plotting_id").css("color","#0090ff");
-                                    $("#ib_plotting").unbind("mouseenter");
-                                     $("#ib_plotting").unbind("mouseleave");
-                                     $("#img2").attr("src",path2);
-                                    clicked=true;
-                                }
-                                });
-function change1(){
-        document.getElementById('img1').src="{% static 'img/view_download.png' %}";
-        $("#image_download1").css("color","#0090ff")
-    }
-    function restore1(){
-        document.getElementById('img1').src="{% static 'img/image_download.png' %}";
-        $("#image_download1").css("color","#999999")
-    }
-    function change2(){
-        document.getElementById('img2').src="{% static 'img/measure11.png' %}";
-        $("#plotting_id").css("color","#0090ff")
-    }
-    function restore2(){
-        document.getElementById('img2').src="{% static 'img/measure.png' %}";
-         $("#plotting_id").css("color","#999999")
-    }
-
-                         </script>
-
-                    </div>
-                    </a>
-                    <div id =plotting_menu style="display:none">
-                       <button id='draw_button_div' class="btn btn-primary function-but">标绘</button><br/>
-                       <button id='distance_button_div' class="btn btn-primary function-but">测距</button><br/>
-                       <button id='area_button_div' class="btn btn-primary function-but">测面积</button><br/>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
-     <script type="text/javascript">
-         var map = new ol.Map({
-           target: 'map',
-           view: new ol.View({
-             center: ol.proj.fromLonLat([117.2027, 39.1653]),
-             zoom: 15,
-             maxZoom:18,
-             minZoom:13
-           }),
-           controls: ol.control.defaults().extend([
-                new ol.control.ScaleLine({  }),
-                new ol.control.MousePosition({
-                    coordinateFormat: ol.coordinate.createStringXY(4),
-                    projection: 'EPSG:4326'
-                }),
-                new ol.control.ScaleLine({  }),
-                new ol.control.ZoomSlider({
-                    maxResolution:1000,
-                    minResolution:1000
-                })
-          ]),
-         });
-        //map.addLayer(baidu_layer);
-        map.addLayer(default_geo_layer2);
-        map.addLayer(default_geo_layer);
-        map.render();
+
+    $(".xl2").css("background","#3178f5");
+            $(".xl2").css("color","white");
+            $(".xl1").css("background","white");
+            $(".xl1").css("color","#8a8a8a");
+            $(".xl3").css("background","white");
+            $(".xl3").css("color","#8a8a8a");
+            $(".xl7").css("background","white");
+            $(".xl7").css("color","#8a8a8a");
+            $(".xl5").css("background","white");
+            $(".xl5").css("color","#8a8a8a");
+            $(".xl6").css("background","white");
+            $(".xl6").css("color","#8a8a8a");
+            $(".xl4").css("background","white");
+            $(".xl4").css("color","#8a8a8a");
+            $(".xl0").css("background","white");
+            $(".xl0").css("color","#8a8a8a");
+            var a1 = $(".mjxx").text();
+            console.log(a1)
+            $(".mjxx").text(40.81461);
+    });
+
+    $(".xl3").click(function(){
+
+    var huayuan = ol.proj.fromLonLat([(117.39372),(39.15034)]);
+        map2.hide();
+        map3.hide();
+        map6.hide();
+        map4.hide();
+        map5.show();
+        map8.hide();
+        map7.hide();
+        map9.hide();
+    map5.css("visibility","visible");
+    map3.css("visibility","none");
+    map2.css("visibility","none");
+    map6.css("visibility","none");
+    map7.css("visibility","none");
+    map8.css("visibility","none");
+    map4.css("visibility","none");
+    map9.css("visibility","none");
+     map_5.getView().animate({
+      center:huayuan,
+      duration: 2000,
+      zoom:11
+    });
+
+
+    $(".xl3").css("background","#3178f5");
+            $(".xl3").css("color","white");
+            $(".xl1").css("background","white");
+            $(".xl1").css("color","#8a8a8a");
+            $(".xl2").css("background","white");
+            $(".xl2").css("color","#8a8a8a");
+            $(".xl7").css("background","white");
+            $(".xl7").css("color","#8a8a8a");
+            $(".xl5").css("background","white");
+            $(".xl5").css("color","#8a8a8a");
+            $(".xl6").css("background","white");
+            $(".xl6").css("color","#8a8a8a");
+            $(".xl4").css("background","white");
+            $(".xl4").css("color","#8a8a8a");
+            $(".xl0").css("background","white");
+            $(".xl0").css("color","#8a8a8a");
+            var a1 = $(".mjxx").text();
+            console.log(a1)
+            $(".mjxx").text(2.96368);
+    });
+
+
+
+    $(".xl4").click(function(){
+    var huayuan = ol.proj.fromLonLat([(117.39372),(39.15034)]);
+        map2.hide();
+        map3.hide();
+        map5.hide();
+        map4.hide();
+        map9.show();
+        map7.hide();
+        map6.hide();
+        map8.hide();
+    map9.css("visibility","visible");
+    map3.css("visibility","none");
+    map2.css("visibility","none");
+    map5.css("visibility","none");
+    map7.css("visibility","none");
+    map4.css("visibility","none");
+    map6.css("visibility","none");
+    map8.css("visibility","none");
+    map_9.getView().animate({
+      center:huayuan,
+      duration: 2000,
+      zoom:11
+    });
+
+
+
+
+    $(".xl4").css("background","#3178f5");
+            $(".xl4").css("color","white");
+            $(".xl1").css("background","white");
+            $(".xl1").css("color","#8a8a8a");
+            $(".xl2").css("background","white");
+            $(".xl2").css("color","#8a8a8a");
+            $(".xl7").css("background","white");
+            $(".xl7").css("color","#8a8a8a");
+            $(".xl5").css("background","white");
+            $(".xl5").css("color","#8a8a8a");
+            $(".xl6").css("background","white");
+            $(".xl6").css("color","#8a8a8a");
+            $(".xl3").css("background","white");
+            $(".xl3").css("color","#8a8a8a");
+            $(".xl0").css("background","white");
+            $(".xl0").css("color","#8a8a8a");
+            var a1 = $(".mjxx").text();
+            console.log(a1)
+            $(".mjxx").text(40.835035);
+    });
+    $(".xl6").click(function(){
+
+    var huayuan = ol.proj.fromLonLat([(117.39372),(39.15034)]);
+        map2.hide();
+        map3.hide();
+        map5.hide();
+        map4.hide();
+        map8.hide();
+        map6.show();
+        map7.hide();
+        map9.hide();
+    map6.css("visibility","visible");
+    map8.css("visibility","none");
+    map3.css("visibility","none");
+    map2.css("visibility","none");
+    map5.css("visibility","none");
+    map7.css("visibility","none");
+    map4.css("visibility","none");
+    map9.css("visibility","none");
+     map_6.getView().animate({
+      center:huayuan,
+      duration: 2000,
+      zoom:11
+    });
+
+
+
+    $(".xl6").css("background","#3178f5");
+            $(".xl6").css("color","white");
+            $(".xl1").css("background","white");
+            $(".xl1").css("color","#8a8a8a");
+            $(".xl2").css("background","white");
+            $(".xl2").css("color","#8a8a8a");
+            $(".xl7").css("background","white");
+            $(".xl7").css("color","#8a8a8a");
+            $(".xl5").css("background","white");
+            $(".xl5").css("color","#8a8a8a");
+            $(".xl4").css("background","white");
+            $(".xl4").css("color","#8a8a8a");
+            $(".xl3").css("background","white");
+            $(".xl3").css("color","#8a8a8a");
+            $(".xl0").css("background","white");
+            $(".xl0").css("color","#8a8a8a");
+            var a1 = $(".mjxx").text();
+            console.log(a1)
+            $(".mjxx").text(12.68048);
+    });
+    $(".xl0").click(function(){
+    var huayuan = ol.proj.fromLonLat([(117.39372),(39.15034)]);
+        map2.hide();
+        map3.hide();
+        map5.hide();
+        map4.hide();
+        map8.show();
+        map7.hide();
+        map6.hide();
+        map9.hide();
+    map8.css("visibility","visible");
+    map3.css("visibility","none");
+    map2.css("visibility","none");
+    map5.css("visibility","none");
+    map7.css("visibility","none");
+    map4.css("visibility","none");
+    map6.css("visibility","none");
+    map9.css("visibility","none");
+    map_8.getView().animate({
+      center:huayuan,
+      duration: 2000,
+      zoom:11
+    });
+    $(".xl0").css("background","#3178f5");
+            $(".xl0").css("color","white");
+            $(".xl1").css("background","white");
+            $(".xl1").css("color","#8a8a8a");
+            $(".xl2").css("background","white");
+            $(".xl2").css("color","#8a8a8a");
+            $(".xl7").css("background","white");
+            $(".xl7").css("color","#8a8a8a");
+            $(".xl5").css("background","white");
+            $(".xl5").css("color","#8a8a8a");
+            $(".xl4").css("background","white");
+            $(".xl4").css("color","#8a8a8a");
+            $(".xl3").css("background","white");
+            $(".xl3").css("color","#8a8a8a");
+            $(".xl6").css("background","white");
+            $(".xl6").css("color","#8a8a8a");
+            var a1 = $(".mjxx").text();
+            console.log(a1)
+            $(".mjxx").text(158.27594);
+    });
+
+
+
     </script>
-
     <script src="{% static 'js/load_draw.js' %}"></script>
+    <!--<script src="{% static 'js/roller_shutters.js' %}"></script>-->
     <script src="{% static 'js/select_draw.js' %}"></script>
-    <script src="{% static 'js/polygon.js' %}"></script>
+    <script src="{% static 'js/polygon1.js' %}"></script>
     <script src="{% static 'js/distance.js' %}"></script>
     <script src="{% static 'js/area.js' %}"></script>
- </body>
+    </div>
+</body>
 </html>
-
-<!-- http://172.20.53.157:8080/geoserver/test/wms
-https://openlayers.org/en/v4.6.5/build/ol.js-->

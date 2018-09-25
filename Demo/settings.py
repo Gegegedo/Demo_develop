@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis'
 ]
 
 MIDDLEWARE = [
@@ -86,7 +87,7 @@ WSGI_APPLICATION = 'Demo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django
-        'NAME': 'RSI',
+        'NAME': 'RSI_NEW',
         'USER': 'root',
         'PASSWORD': '123456',
         'HOST':'localhost',
@@ -144,37 +145,37 @@ STATICFILES_DIRS = (
 
 AUTH_USER_MODEL = "web.Myuser"
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '[%(asctime)s] [%(levelname)s] %(message)s'
-        },
-    },
-    'handlers': {
-        'console':{
-            'level':'INFO',
-            'class':'logging.StreamHandler',
-            'formatter': 'verbose'
-        },
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'filename': '/home/zhou/PycharmProjects/Demo/monitor.log',
-            'formatter': 'verbose'
-        },
-        'email': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler',
-            'include_html' : True,
-        }
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console', 'file', 'email'],
-            'level': 'INFO',
-            'propagate': True,
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'verbose': {
+#             'format': '[%(asctime)s] [%(levelname)s] %(message)s'
+#         },
+#     },
+#     'handlers': {
+#         'console':{
+#             'level':'INFO',
+#             'class':'logging.StreamHandler',
+#             'formatter': 'verbose'
+#         },
+#         'file': {
+#             'level': 'INFO',
+#             'class': 'logging.FileHandler',
+#             'filename': '/home/zhou/PycharmProjects/Demo/monitor.log',
+#             'formatter': 'verbose'
+#         },
+#         'email': {
+#             'level': 'ERROR',
+#             'class': 'django.utils.log.AdminEmailHandler',
+#             'include_html' : True,
+#         }
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console', 'file', 'email'],
+#             'level': 'INFO',
+#             'propagate': True,
+#         },
+#     },
+# }

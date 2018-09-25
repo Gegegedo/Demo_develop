@@ -1,0 +1,1785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4ca7dd9-63e1-4c4c-9a46-6438039226d2" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/YDS.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Maps/8/geojsons_t1.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Maps/8/geojsons_t2.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Maps/8/geojsons_t3.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Maps/8/geojsons_t4.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Maps/8/geojsons_t5.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Maps/8/geojsons_t6.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Maps/8/geojsons_t7.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/autocomplete.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/base.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/changelists.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/dashboard.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/fonts.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/forms.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/login.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/responsive.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/responsive_rtl.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/rtl.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/LICENSE-SELECT2.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/css/widgets.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/README.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Bold-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Light-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Regular-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/README.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-no.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/search.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/SelectBox.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/actions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/actions.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/autocomplete.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/calendar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/cancel.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/change_form.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/collapse.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/collapse.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/core.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/inlines.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/inlines.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/jquery.init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/popup_response.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/timeparse.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/urlify.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/LICENSE-SELECT2.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/az.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ca.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/cs.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/da.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/de.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/el.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/en.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/es.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/et.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/eu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fa.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/gl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/he.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/id.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/is.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/it.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ja.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/km.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ko.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/mk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ms.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nb.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt-BR.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ro.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ru.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/th.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/uk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/vi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-CN.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-TW.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/baogao/weijian.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/baogao/weijian1.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/baogao/xinxitongji.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/baogao/资源分类.pdf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/ceshi2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/base.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/alertify/alertify.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/alertify/default.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/animsition.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/animsition.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/animsition.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/common.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/drop-down.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/echartsHome.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/font-awesome.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/jquery-labelauty.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/jquery.circliful.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/qk.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/rfm.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/style.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/system.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/xgzb.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/css/xsfx.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/css/yds/tablemiddle.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/111.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/111.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/baogao.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/baogao1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/compare1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/compare2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/denglu.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/denglu1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/denglumima1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/denglumima2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/dianhua.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/1.PNG" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/3.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/4.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/5.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/6.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/7.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/8.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/cha1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/cha2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/shuju.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/xinzengzhanghu.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/duoxuan/yaoshi.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/mima.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/sandianjuhe.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/shezhibeijing.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/touxiang .png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/tuichu.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/user1.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/user2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/weizhi-cheng.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/weizhi-hong.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/weizhi-qing.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/weizhi-zi.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-baogao.PNG" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-compare01.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-compare2.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-shouye.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-shouyeblue.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-shouyegreen.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-shouyered.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-shouyeyellow.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yy-ziyuan.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yygif.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/yygif2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/zhanghao .png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/img/zhanghaoguanli.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/corechart.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/interesting_area.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.ba-resize.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/jquery.gvChart-1.0.1.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/jsapi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/polygon2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/roller_shutter1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/base.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/config.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/highcharts.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/highcharts.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/highcharts-3d.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/highcharts-3d.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/highcharts-more.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/highcharts-more.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/highcharts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/highcharts.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/accessibility.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/accessibility.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/annotations.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/annotations.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/boost-canvas.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/boost-canvas.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/boost.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/boost.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/broken-axis.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/broken-axis.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/bullet.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/bullet.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/data.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/data.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/drag-panes.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/drag-panes.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/drilldown.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/drilldown.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/export-data.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/export-data.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/exporting.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/exporting.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/funnel.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/funnel.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/gantt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/gantt.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/grid-axis.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/grid-axis.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/heatmap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/heatmap.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/histogram-bellcurve.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/histogram-bellcurve.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/item-series.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/item-series.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/no-data-to-display.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/no-data-to-display.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/offline-exporting.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/offline-exporting.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/oldie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/oldie.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/overlapping-datalabels.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/overlapping-datalabels.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/parallel-coordinates.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/parallel-coordinates.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/pareto.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/pareto.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/pattern-fill.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/pattern-fill.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/sankey.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/sankey.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/series-label.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/series-label.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/solid-gauge.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/solid-gauge.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/static-scale.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/static-scale.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/stock.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/stock.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/streamgraph.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/streamgraph.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/sunburst.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/sunburst.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/tilemap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/tilemap.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/treemap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/treemap.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/variable-pie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/variable-pie.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/variwide.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/variwide.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/vector.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/vector.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/windbarb.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/windbarb.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/wordcloud.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/wordcloud.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/xrange.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/modules/xrange.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/avocado.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/avocado.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/dark-blue.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/dark-blue.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/dark-green.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/dark-green.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/dark-unica.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/dark-unica.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/gray.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/gray.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/grid-light.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/grid-light.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/grid.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/grid.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/sand-signika.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/sand-signika.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/skies.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/skies.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/sunset.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/js/themes/sunset.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/themes/dark-unica.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/themes/grid-light.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/css/themes/sand-signika.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/highcharts-3d.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/highcharts-3d.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/highcharts-more.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/highcharts-more.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/highcharts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/highcharts.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/jquery.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/alertify.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/common.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/echarts.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/echartsExample.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jqbar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jquery-labelauty.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jquery-latest.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jquery-ui.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jquery.animsition.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jquery.circliful.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jquery.cityselect.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jquery.tablesorter.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/jquery.validate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/macarons .js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/select-widget-min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/show-bar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/js/sq_data.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/canvg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/canvg.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/echarts/echarts.common.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/jq/jquery.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/jspdf.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/jspdf.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/req/config.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/req/index.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/req/require.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/rgbcolor.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/rgbcolor.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/svg2pdf.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/lib/svg2pdf.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/accessibility.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/accessibility.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/annotations.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/annotations.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/boost-canvas.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/boost-canvas.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/boost.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/boost.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/broken-axis.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/broken-axis.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/bullet.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/bullet.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/data.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/data.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/drag-panes.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/drag-panes.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/drilldown.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/drilldown.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/export-data.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/export-data.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/exporting.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/exporting.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/funnel.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/funnel.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/gantt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/gantt.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/grid-axis.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/grid-axis.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/heatmap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/heatmap.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/histogram-bellcurve.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/histogram-bellcurve.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/item-series.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/item-series.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/no-data-to-display.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/no-data-to-display.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/offline-exporting.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/offline-exporting.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/oldie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/oldie.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/overlapping-datalabels.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/overlapping-datalabels.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/parallel-coordinates.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/parallel-coordinates.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/pareto.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/pareto.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/pattern-fill.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/pattern-fill.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/sankey.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/sankey.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/series-label.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/series-label.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/solid-gauge.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/solid-gauge.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/static-scale.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/static-scale.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/stock.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/stock.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/streamgraph.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/streamgraph.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/sunburst.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/sunburst.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/tilemap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/tilemap.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/treemap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/treemap.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/variable-pie.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/variable-pie.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/variwide.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/variwide.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/vector.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/vector.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/windbarb.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/windbarb.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/wordcloud.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/wordcloud.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/xrange.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/modules/xrange.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/avocado.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/avocado.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/dark-blue.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/dark-blue.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/dark-green.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/dark-green.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/dark-unica.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/dark-unica.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/gray.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/gray.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/grid-light.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/grid-light.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/grid.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/grid.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/sand-signika.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/sand-signika.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/skies.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/skies.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/sunset.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/yds/themes/sunset.src.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/338.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/338.tif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/339.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/339.tif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/340.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/340.tif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/341.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/341.tif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/342.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/342.tif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/343.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/static/previewMap/343.tif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/ceshi.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/ceshi2.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/chaiqian.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/homeceshi.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/regional_present_situation.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/ziyuanfenleixiangcha.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/ImageryServer/Auto_graphiclabel.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/ImageryServer/WCS_transform.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/migrations/0001_initial.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/Demo.iml" afterPath="$PROJECT_DIR$/.idea/Demo.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/Demo/settings.py" afterPath="$PROJECT_DIR$/Demo/settings.py" />
+      <change beforePath="$PROJECT_DIR$/Demo/urls.py" afterPath="$PROJECT_DIR$/Demo/urls.py" />
+      <change beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
+      <change beforePath="$PROJECT_DIR$/static/css/basic.css" afterPath="$PROJECT_DIR$/static/css/basic.css" />
+      <change beforePath="$PROJECT_DIR$/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/static/css/bootstrap.css" />
+      <change beforePath="$PROJECT_DIR$/static/event1.png" afterPath="$PROJECT_DIR$/static/event1.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/500305658_wx.png" afterPath="$PROJECT_DIR$/static/img/500305658_wx.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/add-user.png" afterPath="$PROJECT_DIR$/static/img/add-user.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/agriculture.png" afterPath="$PROJECT_DIR$/static/img/agriculture.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/building.png" afterPath="$PROJECT_DIR$/static/img/building.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/check.png" afterPath="$PROJECT_DIR$/static/img/check.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/check1.png" afterPath="$PROJECT_DIR$/static/img/check1.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/close.png" afterPath="$PROJECT_DIR$/static/img/close.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/compare.png" afterPath="$PROJECT_DIR$/static/img/compare.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/compare1.png" afterPath="$PROJECT_DIR$/static/img/compare1.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/contrast.png" afterPath="$PROJECT_DIR$/static/img/contrast.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/date.png" afterPath="$PROJECT_DIR$/static/img/date.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/delete.png" afterPath="$PROJECT_DIR$/static/img/delete.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/delete1.png" afterPath="$PROJECT_DIR$/static/img/delete1.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/download.png" afterPath="$PROJECT_DIR$/static/img/download.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/download1.png" afterPath="$PROJECT_DIR$/static/img/download1.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/e.png" afterPath="$PROJECT_DIR$/static/img/e.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/environment.png" afterPath="$PROJECT_DIR$/static/img/environment.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/event.png" afterPath="$PROJECT_DIR$/static/img/event.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/event1.png" afterPath="$PROJECT_DIR$/static/img/event1.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/favicon.ico" afterPath="$PROJECT_DIR$/static/img/favicon.ico" />
+      <change beforePath="$PROJECT_DIR$/static/img/forestry.png" afterPath="$PROJECT_DIR$/static/img/forestry.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/image_download.png" afterPath="$PROJECT_DIR$/static/img/image_download.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/location.png" afterPath="$PROJECT_DIR$/static/img/location.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/map.png" afterPath="$PROJECT_DIR$/static/img/map.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/measure.png" afterPath="$PROJECT_DIR$/static/img/measure.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/municipal.png" afterPath="$PROJECT_DIR$/static/img/municipal.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/password.png" afterPath="$PROJECT_DIR$/static/img/password.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/password_revise.png" afterPath="$PROJECT_DIR$/static/img/password_revise.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/password_revise1.png" afterPath="$PROJECT_DIR$/static/img/password_revise1.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/permission.png" afterPath="$PROJECT_DIR$/static/img/permission.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/pwswd.png" afterPath="$PROJECT_DIR$/static/img/pwswd.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/q.png" afterPath="$PROJECT_DIR$/static/img/q.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/remove.png" afterPath="$PROJECT_DIR$/static/img/remove.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/resource.png" afterPath="$PROJECT_DIR$/static/img/resource.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/road.png" afterPath="$PROJECT_DIR$/static/img/road.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/search.png" afterPath="$PROJECT_DIR$/static/img/search.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/sedimentation.png" afterPath="$PROJECT_DIR$/static/img/sedimentation.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/setting.png" afterPath="$PROJECT_DIR$/static/img/setting.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/spaceflight.png" afterPath="$PROJECT_DIR$/static/img/spaceflight.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/stsff.png" afterPath="$PROJECT_DIR$/static/img/stsff.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/user-search.png" afterPath="$PROJECT_DIR$/static/img/user-search.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/user.png" afterPath="$PROJECT_DIR$/static/img/user.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/user_ statistics .png" afterPath="$PROJECT_DIR$/static/img/user_ statistics .png" />
+      <change beforePath="$PROJECT_DIR$/static/img/user_logo.png" afterPath="$PROJECT_DIR$/static/img/user_logo.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/username.png" afterPath="$PROJECT_DIR$/static/img/username.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/vedio.png" afterPath="$PROJECT_DIR$/static/img/vedio.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/view.png" afterPath="$PROJECT_DIR$/static/img/view.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/view_download.png" afterPath="$PROJECT_DIR$/static/img/view_download.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/w.png" afterPath="$PROJECT_DIR$/static/img/w.png" />
+      <change beforePath="$PROJECT_DIR$/static/js/demolition_management_showlist.js" afterPath="$PROJECT_DIR$/static/js/demolition_management_showlist.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/geomap.js" afterPath="$PROJECT_DIR$/static/js/geomap.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/ib_event_management_showlist.js" afterPath="$PROJECT_DIR$/static/js/ib_event_management_showlist.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/load_draw.js" afterPath="$PROJECT_DIR$/static/js/load_draw.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/openlayers_v4.5.0/closure-library/scripts/ci/CloseAdobeDialog.exe" afterPath="$PROJECT_DIR$/static/js/openlayers_v4.5.0/closure-library/scripts/ci/CloseAdobeDialog.exe" />
+      <change beforePath="$PROJECT_DIR$/static/js/openlayers_v4.5.0/closure-library/scripts/ci/ie_setup.bat" afterPath="$PROJECT_DIR$/static/js/openlayers_v4.5.0/closure-library/scripts/ci/ie_setup.bat" />
+      <change beforePath="$PROJECT_DIR$/static/js/polygon1.js" afterPath="$PROJECT_DIR$/static/js/polygon1.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/roller_shutters.js" afterPath="$PROJECT_DIR$/static/js/roller_shutters.js" />
+      <change beforePath="$PROJECT_DIR$/static/js/select_draw.js" afterPath="$PROJECT_DIR$/static/js/select_draw.js" />
+      <change beforePath="$PROJECT_DIR$/templates/am_account_Inquiry.html" afterPath="$PROJECT_DIR$/templates/am_account_Inquiry.html" />
+      <change beforePath="$PROJECT_DIR$/templates/am_add_Account.html" afterPath="$PROJECT_DIR$/templates/am_add_Account.html" />
+      <change beforePath="$PROJECT_DIR$/templates/am_permissions_management.html" afterPath="$PROJECT_DIR$/templates/am_permissions_management.html" />
+      <change beforePath="$PROJECT_DIR$/templates/am_permissions_query.html" afterPath="$PROJECT_DIR$/templates/am_permissions_query.html" />
+      <change beforePath="$PROJECT_DIR$/templates/de_compare.html" afterPath="$PROJECT_DIR$/templates/de_compare.html" />
+      <change beforePath="$PROJECT_DIR$/templates/de_plotting.html" afterPath="$PROJECT_DIR$/templates/de_plotting.html" />
+      <change beforePath="$PROJECT_DIR$/templates/default_municipal.html" afterPath="$PROJECT_DIR$/templates/default_municipal.html" />
+      <change beforePath="$PROJECT_DIR$/templates/developing.html" afterPath="$PROJECT_DIR$/templates/developing.html" />
+      <change beforePath="$PROJECT_DIR$/templates/gs_show_map.html" afterPath="$PROJECT_DIR$/templates/gs_show_map.html" />
+      <change beforePath="$PROJECT_DIR$/templates/home_municipal.html" afterPath="$PROJECT_DIR$/templates/home_municipal.html" />
+      <change beforePath="$PROJECT_DIR$/templates/ib_plotting.html" afterPath="$PROJECT_DIR$/templates/ib_plotting.html" />
+      <change beforePath="$PROJECT_DIR$/templates/ib_roller_shutters.html" afterPath="$PROJECT_DIR$/templates/ib_roller_shutters.html" />
+      <change beforePath="$PROJECT_DIR$/templates/index_new.html" afterPath="$PROJECT_DIR$/templates/index_new.html" />
+      <change beforePath="$PROJECT_DIR$/templates/rm_resource_search.html" afterPath="$PROJECT_DIR$/templates/rm_resource_search.html" />
+      <change beforePath="$PROJECT_DIR$/templates/rm_show_map.html" afterPath="$PROJECT_DIR$/templates/rm_show_map.html" />
+      <change beforePath="$PROJECT_DIR$/templates/uc_info_revise.html" afterPath="$PROJECT_DIR$/templates/uc_info_revise.html" />
+      <change beforePath="$PROJECT_DIR$/templates/uc_password_revise.html" afterPath="$PROJECT_DIR$/templates/uc_password_revise.html" />
+      <change beforePath="$PROJECT_DIR$/templates/view_account_management.html" afterPath="$PROJECT_DIR$/templates/view_account_management.html" />
+      <change beforePath="$PROJECT_DIR$/templates/view_demolition.html" afterPath="$PROJECT_DIR$/templates/view_demolition.html" />
+      <change beforePath="$PROJECT_DIR$/templates/view_general_survey.html" afterPath="$PROJECT_DIR$/templates/view_general_survey.html" />
+      <change beforePath="$PROJECT_DIR$/templates/view_illegal_building.html" afterPath="$PROJECT_DIR$/templates/view_illegal_building.html" />
+      <change beforePath="$PROJECT_DIR$/templates/view_resource_management.html" afterPath="$PROJECT_DIR$/templates/view_resource_management.html" />
+      <change beforePath="$PROJECT_DIR$/templates/view_user_center.html" afterPath="$PROJECT_DIR$/templates/view_user_center.html" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/easy_install" afterPath="$PROJECT_DIR$/venv/bin/easy_install" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/easy_install-3.5" afterPath="$PROJECT_DIR$/venv/bin/easy_install-3.5" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/pip" afterPath="$PROJECT_DIR$/venv/bin/pip" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/pip3" afterPath="$PROJECT_DIR$/venv/bin/pip3" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/pip3.5" afterPath="$PROJECT_DIR$/venv/bin/pip3.5" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/python" afterPath="$PROJECT_DIR$/venv/bin/python" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/python3" afterPath="$PROJECT_DIR$/venv/bin/python3" />
+      <change beforePath="$PROJECT_DIR$/venv/bin/python3.5" afterPath="$PROJECT_DIR$/venv/bin/python3.5" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t32.exe" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t32.exe" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t64.exe" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t64.exe" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w32.exe" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w32.exe" />
+      <change beforePath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w64.exe" afterPath="$PROJECT_DIR$/venv/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w64.exe" />
+      <change beforePath="$PROJECT_DIR$/venv/lib64" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/venv1/bin/easy_install" afterPath="$PROJECT_DIR$/venv1/bin/easy_install" />
+      <change beforePath="$PROJECT_DIR$/venv1/bin/easy_install-3.5" afterPath="$PROJECT_DIR$/venv1/bin/easy_install-3.5" />
+      <change beforePath="$PROJECT_DIR$/venv1/bin/pip" afterPath="$PROJECT_DIR$/venv1/bin/pip" />
+      <change beforePath="$PROJECT_DIR$/venv1/bin/pip3" afterPath="$PROJECT_DIR$/venv1/bin/pip3" />
+      <change beforePath="$PROJECT_DIR$/venv1/bin/pip3.5" afterPath="$PROJECT_DIR$/venv1/bin/pip3.5" />
+      <change beforePath="$PROJECT_DIR$/venv1/bin/python" afterPath="$PROJECT_DIR$/venv1/bin/python" />
+      <change beforePath="$PROJECT_DIR$/venv1/bin/python3" afterPath="$PROJECT_DIR$/venv1/bin/python3" />
+      <change beforePath="$PROJECT_DIR$/venv1/bin/python3.5" afterPath="$PROJECT_DIR$/venv1/bin/python3.5" />
+      <change beforePath="$PROJECT_DIR$/venv1/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t32.exe" afterPath="$PROJECT_DIR$/venv1/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t32.exe" />
+      <change beforePath="$PROJECT_DIR$/venv1/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t64.exe" afterPath="$PROJECT_DIR$/venv1/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/t64.exe" />
+      <change beforePath="$PROJECT_DIR$/venv1/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w32.exe" afterPath="$PROJECT_DIR$/venv1/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w32.exe" />
+      <change beforePath="$PROJECT_DIR$/venv1/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w64.exe" afterPath="$PROJECT_DIR$/venv1/lib/python3.5/site-packages/pip-9.0.1-py3.5.egg/pip/_vendor/distlib/w64.exe" />
+      <change beforePath="$PROJECT_DIR$/venv1/lib64" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImageryServer/ImagePubMan.py" afterPath="$PROJECT_DIR$/web/ImageryServer/ImagePubMan.py" />
+      <change beforePath="$PROJECT_DIR$/web/models.py" afterPath="$PROJECT_DIR$/web/models.py" />
+      <change beforePath="$PROJECT_DIR$/web/views.py" afterPath="$PROJECT_DIR$/web/views.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1676125847">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="js" value="1" />
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JavaScript" value="1" />
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ib_event_management.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ib_event_management.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+              <folding>
+                <marker date="1527690808000" expanded="true" signature="1285:1399" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="518" column="39" lean-forward="false" selection-start-line="518" selection-start-column="31" selection-end-line="518" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ceshi.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/ceshi.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chaiqian.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/chaiqian.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3248">
+              <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="interesting_area.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/interesting_area.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1400">
+              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="de_plotting.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/de_plotting.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="253" column="88" lean-forward="false" selection-start-line="253" selection-start-column="77" selection-end-line="253" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="de_management.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/de_management.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="201" column="9" lean-forward="false" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
+              <folding>
+                <marker date="1527671339000" expanded="true" signature="1234:1348" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demolition_management_showlist.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/demolition_management_showlist.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-257">
+              <caret line="88" column="23" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="88" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="distance.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/js/distance.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3180">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1002">
+              <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>_resource_search</find>
+      <find>@login</find>
+      <find>LOGGING</find>
+      <find>log</find>
+      <find>new_btn</find>
+      <find>compare_span</find>
+      <find>de_map</find>
+      <find>map_compare_span</find>
+      <find>de_map_a</find>
+      <find>compare-but</find>
+      <find>account_manage_li</find>
+      <find>tooltip</find>
+      <find>save_draw</find>
+      <find>CHANGE2</find>
+      <find>MOVE</find>
+      <find>ib_plotting</find>
+      <find>move_out</find>
+      <find>delete</find>
+      <find>remove</find>
+      <find>imagePath3</find>
+      <find>load_all_draw</find>
+      <find>map</find>
+      <find>popup</find>
+      <find>giftu</find>
+      <find>w1</find>
+      <find>close_login</find>
+      <find>_de_event_search</find>
+      <find>imagePath1</find>
+      <find>cha</find>
+      <find>seperate_load_draw</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>de</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/templates/rm_show_map.html" />
+        <option value="$PROJECT_DIR$/static/js/roller_shutters.js" />
+        <option value="$PROJECT_DIR$/templates/view_resource_management.html" />
+        <option value="$PROJECT_DIR$/static/js/yds/lib/req/require.js" />
+        <option value="$PROJECT_DIR$/static/js/yds/lib/req/config.js" />
+        <option value="$PROJECT_DIR$/static/js/polygon2.js" />
+        <option value="$PROJECT_DIR$/static/js/polygon.js" />
+        <option value="$PROJECT_DIR$/templates/gs_show_list.html" />
+        <option value="$PROJECT_DIR$/static/js/ib_event_management_showlist.js" />
+        <option value="$PROJECT_DIR$/templates/ziyuanfenleixiangcha.html" />
+        <option value="$PROJECT_DIR$/static/css/basic.css" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/js/yds/base.js" />
+        <option value="$PROJECT_DIR$/templates/home-ceshi.html" />
+        <option value="$PROJECT_DIR$/templates/ceshi.html" />
+        <option value="$PROJECT_DIR$/templates/homeceshi.html" />
+        <option value="$PROJECT_DIR$/templates/view_demolition.html" />
+        <option value="$PROJECT_DIR$/templates/ib_plotting.html" />
+        <option value="$PROJECT_DIR$/templates/de_plotting.html" />
+        <option value="$PROJECT_DIR$/templates/view_user_center.html" />
+        <option value="$PROJECT_DIR$/templates/uc_info_revise.html" />
+        <option value="$PROJECT_DIR$/templates/am_add_Account.html" />
+        <option value="$PROJECT_DIR$/static/css/index_new.css" />
+        <option value="$PROJECT_DIR$/static/js/index_new1.js" />
+        <option value="$PROJECT_DIR$/static/js/index_new2.js" />
+        <option value="$PROJECT_DIR$/templates/view_illegal_building.html" />
+        <option value="$PROJECT_DIR$/templates/uc_password_revise.html" />
+        <option value="$PROJECT_DIR$/static/css/yds/base.css" />
+        <option value="$PROJECT_DIR$/static/css/yds/tablemiddle.css" />
+        <option value="$PROJECT_DIR$/templates/am_permissions_query.html" />
+        <option value="$PROJECT_DIR$/static/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/templates/view_general_survey.html" />
+        <option value="$PROJECT_DIR$/templates/view_account_management.html" />
+        <option value="$PROJECT_DIR$/templates/am_account_Inquiry.html" />
+        <option value="$PROJECT_DIR$/templates/am_permissions_management.html" />
+        <option value="$PROJECT_DIR$/templates/de_management.html" />
+        <option value="$PROJECT_DIR$/templates/ib_event_management.html" />
+        <option value="$PROJECT_DIR$/templates/index_new.html" />
+        <option value="$PROJECT_DIR$/static/css/ceshi2.css" />
+        <option value="$PROJECT_DIR$/templates/regional_present_situation.html" />
+        <option value="$PROJECT_DIR$/templates/rm_resource_search.html" />
+        <option value="$PROJECT_DIR$/templates/developing.html" />
+        <option value="$PROJECT_DIR$/templates/chaiqian.html" />
+        <option value="$PROJECT_DIR$/templates/gs_show_map.html" />
+        <option value="$PROJECT_DIR$/templates/home_municipal.html" />
+        <option value="$PROJECT_DIR$/Demo/settings.py" />
+        <option value="$PROJECT_DIR$/Demo/urls.py" />
+        <option value="$PROJECT_DIR$/static/js/polygon1.js" />
+        <option value="$PROJECT_DIR$/templates/ceshi2.html" />
+        <option value="$PROJECT_DIR$/web/views.py" />
+        <option value="$PROJECT_DIR$/static/js/interesting_area.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="653" />
+    <option name="y" value="77" />
+    <option name="width" value="1807" />
+    <option name="height" value="629" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Demo" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="permiss&#9;FILE&#9;file://C:/Users/YDS/Desktop/Demo/templates/am_permissions_query.html&#10;per&#9;FILE&#9;file://C:/Users/YDS/Desktop/Demo/templates/am_permissions_management.html&#10;gen&#9;FILE&#9;file://C:/Users/YDS/Desktop/Demo/templates/view_general_survey.html&#10;general_survey&#9;FILE&#9;file://C:/Users/YDS/Desktop/Demo/templates/view_general_survey.html&#10;geostr&#9;FILE&#9;file://C:/Users/YDS/Desktop/Demo/static/js/openlayers_v4.5.0/apidoc/ol.geom.LineString.html&#10;graphic_provide&#9;null&#9;null&#10;save_dra&#9;null&#9;null" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/Back" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="C:\Users\YDS\Desktop\Demo\static\js\yds" />
+      <recent name="C:\Users\YDS\Desktop\Demo\static\img" />
+      <recent name="C:\Users\YDS\Desktop\Demo\static\css\yds" />
+      <recent name="C:\Users\YDS\Desktop\Demo\static\baogao" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\YDS\Desktop\Demo\static\js" />
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="runserver" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Demo" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4ca7dd9-63e1-4c4c-9a46-6438039226d2" name="Default" comment="" />
+      <created>1524821681188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1524821681188</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;templates/am_permissions_management.html&#10;#&#9;web/views.py">
+      <created>1525786990931</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1525786990931</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;templates/am_permissions_management.html&#10;#&#9;web/views.py">
+      <created>1525834299997</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1525834299997</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;templates/index_new.html&#10;#&#9;web/views.py">
+      <created>1525834707503</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1525834707503</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;templates/index_new.html&#10;#&#9;web/views.py">
+      <created>1525846257134</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1525846257134</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;templates/index_new.html&#10;#&#9;web/views.py">
+      <created>1525868157022</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1525868157023</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;templates/index_new.html&#10;#&#9;web/views.py">
+      <created>1525917807605</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1525917807605</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log">
+      <created>1525929355893</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1525929355893</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log">
+      <created>1525929567475</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1525929567475</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log">
+      <created>1525929918141</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1525929918141</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log">
+      <created>1525942617144</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1525942617145</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log">
+      <created>1525942955307</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1525942955307</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log">
+      <created>1525951451657</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1525951451657</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log">
+      <created>1526021198256</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1526021198256</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log">
+      <created>1526021273970</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1526021273970</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;web/views.py">
+      <created>1526021843100</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1526021843100</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;web/views.py">
+      <created>1526029191295</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1526029191295</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;web/views.py">
+      <created>1526204724682</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1526204724682</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;web/views.py">
+      <created>1526282518151</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1526282518151</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;web/views.py">
+      <created>1526435384429</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1526435384429</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526436567752</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1526436567752</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526539336585</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1526539336585</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526543408196</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1526543408196</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526614285911</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1526614285912</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526801186584</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1526801186584</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526975669027</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1526975669027</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526977371843</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1526977371843</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526979293965</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1526979293965</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1526981432372</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1526981432372</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527080275951</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1527080275951</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527084127599</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1527084127599</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527148088956</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1527148088956</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527230889902</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1527230889902</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527243790854</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1527243790854</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527258662987</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1527258662987</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527400717372</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1527400717372</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527404128701</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1527404128701</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527470801420</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1527470801420</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527500449334</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1527500449334</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527563706623</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1527563706623</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527588421577</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1527588421577</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527643737838</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1527643737839</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527657723540</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1527657723540</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527671311546</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1527671311546</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527671703478</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1527671703478</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527687776030</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1527687776030</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527693378756</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1527693378756</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527751921259</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1527751921259</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527752193183</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1527752193183</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py">
+      <created>1527752680379</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1527752680380</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="2495" height="1444" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15048544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3255814" sideWeight="0.49716827" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25159237" sideWeight="0.31512946" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1751938" sideWeight="0.46804208" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3232558" sideWeight="0.4340615" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34573644" sideWeight="0.5347896" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959546" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.054263566" sideWeight="0.5250809" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.68487054" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2446281" sideWeight="0.49190938" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;web/migrations/0001_initial.py" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;templates/am_permissions_management.html&#10;#&#9;web/views.py" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;templates/index_new.html&#10;#&#9;web/views.py" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;monitor.log&#10;#&#9;web/views.py" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/DarryNobi/Demo&#10;&#10;# Conflicts:&#10;#&#9;static/js/ib_event_management_showlist.js&#10;#&#9;templates/ib_plotting.html&#10;#&#9;web/views.py" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Demo/urls.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/static/js/interesting_area" />
+    <entry file="file://$PROJECT_DIR$/static/js/image_download.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.ba-resize.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/homeceshi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3682">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ziyuanfenleixiangcha.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10380">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="204" column="33" lean-forward="true" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/roller_shutter1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home_municipal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5380">
+          <caret line="269" column="39" lean-forward="false" selection-start-line="269" selection-start-column="39" selection-end-line="269" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ib_plotting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/load_draw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/geomap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/yds/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/select_draw.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="178" column="35" lean-forward="false" selection-start-line="178" selection-start-column="35" selection-end-line="178" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/weizhi-hong.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/weizhi-qing.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/weizhi-cheng.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="958">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/de_compare.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/am_add_Account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1043">
+          <caret line="209" column="0" lean-forward="false" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/am_account_Inquiry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1060">
+          <caret line="53" column="97" lean-forward="false" selection-start-line="53" selection-start-column="97" selection-end-line="53" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.sqlite3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/regional_present_situation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="181" column="14" lean-forward="false" selection-start-line="181" selection-start-column="14" selection-end-line="181" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/polygon2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/area.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="232" column="59" lean-forward="true" selection-start-line="232" selection-start-column="33" selection-end-line="232" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/am_permissions_management.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="69" column="61" lean-forward="true" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/am_permissions_query.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="70" column="106" lean-forward="false" selection-start-line="70" selection-start-column="106" selection-end-line="70" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/resourceManagement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/duoxuan/cha2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/duoxuan/cha1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/polygon1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="57" column="29" lean-forward="true" selection-start-line="57" selection-start-column="29" selection-end-line="57" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/am_permissions_management.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-900">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/am_permission_management.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="77" column="43" lean-forward="false" selection-start-line="77" selection-start-column="27" selection-end-line="77" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ceshi2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="75" column="65" lean-forward="false" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="65" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#3;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4640#4646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/yygif2.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/yygif.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/yy-ziyuan.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/yy-shouyeyellow.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/yy-shouyered.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/yy-shouyegreen.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/yy-shouye.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="76" column="19" lean-forward="true" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ib_event_management.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="22" column="12" lean-forward="true" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <marker date="1527690808000" expanded="true" signature="1285:1399" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/chaiqian.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3248">
+          <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1002">
+          <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ceshi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="518" column="39" lean-forward="false" selection-start-line="518" selection-start-column="31" selection-end-line="518" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/interesting_area.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1400">
+          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/de_plotting.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="253" column="88" lean-forward="false" selection-start-line="253" selection-start-column="77" selection-end-line="253" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/de_management.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="201" column="9" lean-forward="false" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
+          <folding>
+            <marker date="1527671339000" expanded="true" signature="1234:1348" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/demolition_management_showlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-257">
+          <caret line="88" column="23" lean-forward="true" selection-start-line="87" selection-start-column="12" selection-end-line="88" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/distance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3180">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

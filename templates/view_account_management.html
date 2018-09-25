@@ -3,12 +3,11 @@
  <head>
      <meta charset="utf-8">
      {% load staticfiles %}
+     <link href="{% static 'css/yds/base.css'  %}" rel="stylesheet" >
+     <script src="{% static 'js/yds/base.js' %}"></script>
      <script src="{% static 'js/common.js' %}"></script>
       <link href="{% static 'css/bootstrap.css'  %}" rel="stylesheet" >
     <link href="{% static 'css/bootstrap-theme.css' %}"  rel="stylesheet">
-     <!--<link rel="stylesheet" href="https://openlayers.org/en/v4.5.0/css/ol.css" type="text/css">-->
-     <!--<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap.min.css">-->
-     <!--<link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.1/css/bootstrap-theme.min.css">-->
      <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
      <!--[if lt IE 9]>
      <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
@@ -36,7 +35,7 @@
             text-align:center;
             display:-webkit-flex;
             align-items:center;
-            font-size:2rem;
+            font-size:.14rem;
             color:#8a8a8a;
         }
         .nav-tabs li a:hover, .nav-tabs li a:focus {
@@ -51,7 +50,7 @@
             padding-right:10px;
         }
         .nav-img {
-            transform: scale(0.7);
+            width:60%;
         }
         .picture-span {
             color:#666666;
@@ -152,6 +151,12 @@
             display:-webkit-flex;
             align-items:center;
         }
+        .zhanghuchaxun{
+            background:white;
+        }
+        .nav-text-p1{
+            color:#3178f5;
+        }
     </style>
 
    <script src="{% static 'js/jquery-1.8.2.min.js' %}"></script>
@@ -169,18 +174,18 @@
  </head>
 
  <body>
-    <div style="height:8%; min-height:60px;">
+    <div style="height:8%;">
         <ul class="nav nav-tabs head-ul" style="height:100%; background: #c3c6cb;">
             <li class="account_manage_li">
-                <a id="home" class="" href="javascript:void(0)" onclick="open_account_management('/account_inquiry/')">
-                    <span class="nav-img-p"><img class="nav-img" src="{% static 'img/user-search.png' %}"></span>
-                    <span class="nav-text-p">账户查询</span>
+                <a id="home" class="zhanghuchaxun" href="javascript:void(0)" onclick="open_account_management('/account_inquiry/')">
+                    <span class="nav-img-p"><img class="nav-img nav-img1" src="{% static 'img/user-search.png' %}"></span>
+                    <span class="nav-text-p nav-text-p1">账户查询</span>
                 </a>
             </li>
             <li role="presentation" class="account_manage_li">
-                <a href="javascript:void(0)" onclick="open_account_management('/add_account/')">
-                    <span class="nav-img-p"><img class="nav-img" src="{% static 'img/add-user.png' %}"></span>
-                    <span class="nav-text-p">新增账户</span>
+                <a href="javascript:void(0)" onclick="open_account_management('/add_account/')" class="xinzengzhanghao">
+                    <span class="nav-img-p"><img class="nav-img nav-img2" src="{% static 'img/duoxuan/xinzengzhanghu.png' %}"></span>
+                    <span class="nav-text-p2 nav-text-p">新增账户</span>
                 </a>
             </li>
             <!--<li role="presentation">-->
@@ -190,9 +195,9 @@
                 <!--</a>-->
             <!--</li>-->
             <li role="presentation" class="account_manage_li">
-                <a href="javascript:void(0)" onclick="open_account_management('/authority_management/')">
-                    <span class="nav-img-p"><img class="nav-img" src="{% static 'img/permission.png' %}"></span>
-                    <span class="nav-text-p">权限管理</span>
+                <a href="javascript:void(0)" onclick="open_account_management('/authority_management/')" class="quanxianguanli">
+                    <span class="nav-img-p"><img class="nav-img nav-img3" src="{% static 'img/permission.png' %}"></span>
+                    <span class="nav-text-p3 nav-text-p">权限管理</span>
                 </a>
             </li>
         </ul>
@@ -203,7 +208,42 @@
             </iframe>
         </div>
     </div>
+    <script>
+        $(".zhanghuchaxun").click(function(){
+            $(".nav-text-p1").css("color","#3178f5")
+            $(".zhanghuchaxun").css("background","white");
+            $(".nav-text-p2").css("color","#8a8a8a")
+            $(".xinzengzhanghao").css("background","#e6e7ea");
+            $(".nav-text-p3").css("color","#8a8a8a")
+            $(".quanxianguanli").css("background","#e6e7ea");
+            $(".nav-img1").attr("src","{% static 'img/user-search.png' %}");
+            $(".nav-img2").attr("src","{% static 'img/duoxuan/xinzengzhanghu.png' %}");
+             $(".nav-img3").attr("src","{% static 'img/permission.png' %}");
+        })
+        $(".xinzengzhanghao").click(function(){
+            $(".nav-text-p1").css("color","#8a8a8a")
+            $(".zhanghuchaxun").css("background","#e6e7ea");
+            $(".nav-text-p2").css("color","#3178f5")
+            $(".xinzengzhanghao").css("background","white");
+            $(".nav-text-p3").css("color","#8a8a8a")
+            $(".quanxianguanli").css("background","#e6e7ea");
+            $(".nav-img2").attr("src","{% static 'img/add-user.png' %}");
+            $(".nav-img1").attr("src","{% static 'img/duoxuan/shuju.png' %}");
+            $(".nav-img3").attr("src","{% static 'img/permission.png' %}");
+        })
+        $(".quanxianguanli").click(function(){
+            $(".nav-text-p1").css("color","#8a8a8a")
+            $(".zhanghuchaxun").css("background","#e6e7ea");
+            $(".nav-text-p2").css("color","#8a8a8a")
+            $(".xinzengzhanghao").css("background","#e6e7ea");
+            $(".nav-text-p3").css("color","#3178f5")
+            $(".quanxianguanli").css("background","white");
+            $(".nav-img3").attr("src","{% static 'img/duoxuan/yaoshi.png' %}");
+            $(".nav-img1").attr("src","{% static 'img/duoxuan/shuju.png' %}");
+            $(".nav-img2").attr("src","{% static 'img/duoxuan/xinzengzhanghu.png' %}");
 
+        })
+    </script>
  </body>
 </html>
 
