@@ -344,6 +344,37 @@
                     </ul>
 
     <script src="{% static 'js/geomap.js' %}"></script>
+        <script>
+             $.ajax({
+                                type:'get',
+                                url:'/_autographiclabel_inquiry/',
+                                data: {'type':labeltype_value},
+                                success:function(d_autographiclabel){
+                                    autographiclabel=d_autographiclabel['d_autographiclabel'];
+                                    map.getOverlays().clear();
+                                    for(var i in autographiclabel){
+                                        //alert(autographiclabel[i]);
+                                        var vectorSource = new ol.source.Vector({
+                                            features: (new ol.format.GeoJSON()).readFeatures(autographiclabel[i]),
+                                          });
+                                        style=new ol.style.Style({
+                                            stroke:new ol.style.Stroke({
+                                                color: '#319FD3',
+                                                width: 1,
+                                            }),
+                                            fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+                                                color: 'rgba(49, 159, 211, 0.5)'
+                                            }),
+                                        });
+                                        var vectorLayer = new ol.layer.Vector({
+                                            source: vectorSource,
+                                            style: style
+                                        });
+                                        map.addOverlay(vectorLayer);
+                                    }
+                                }
+                             });
+         </script>
     <script type="text/javascript">
    var map = new ol.Map({
    target: 'map',

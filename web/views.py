@@ -68,7 +68,6 @@ def no_permissions(request):
     return render(request,
                   template_name='no_permissions.html')
 
-
 def register(request):
     return render(request,
                   template_name='register.html')
@@ -241,12 +240,13 @@ def developing(request):
 
 def ib_plotting(request):
     id=request.GET.get('id',False)
-    x=0.0;y=0.0;
+    x=0.0;y=0.0;g_type=None
     if id:
         draw=GraphicLabel.objects.get(id=id)
         x=draw.coordinate_x
         y=draw.coordinate_y
-    return render(request,'ib_plotting.html',{'x':x,'y':y})
+        g_type=draw.graphiclabel
+    return render(request,'ib_plotting.html',{'x':x,'y':y,'type':json.dumps(g_type,cls=DjangoJSONEncoder)})
 
 
 def graphic_look(request):
@@ -566,9 +566,9 @@ def seperate_load_draw(request):
               ibuild_draws.append(draw)
           if (draw["graphiclabel"] == "疑似违建"):
               sibuild_draws.append(draw)
-          if (draw["graphiclabel"] == "违建"):
+          if (draw["graphiclabel"] == "拆迁"):
               demolition_draws.append(draw)
-          if (draw["graphiclabel"] == "疑似违建"):
+          if (draw["graphiclabel"] == "疑似拆迁"):
               sdemolition_draws.append(draw)
 
     # ibuild_draws=model_to_dict(ibuild_draws)
@@ -590,6 +590,36 @@ def load_all_draw(request):
 
     all_draws_data = [draw.context for draw in all_draws]
     return JsonResponse({'all_draws':all_draws_data})
+
+def load_ibuild_draw(request):
+    ibuild_draws=GraphicLabel.objects.filter(graphiclabel="违建")
+    sibuild_draws=GraphicLabel.objects.filter(graphiclabel="疑似违建")
+    for draw_list in [ibuild_draws,sibuild_draws]:
+        for draw in draw_list:
+          json_context=json.loads(draw.context)
+          json_context['properties']['id']=draw.id
+          draw.context=json.dumps(json_context)
+
+
+    ibuild_draws_data = [draw.context for draw in ibuild_draws]
+    sibuild_draws_data = [draw.context for draw in sibuild_draws]
+    return JsonResponse({'ibuild_draws':ibuild_draws_data,'sibuild_draws':sibuild_draws_data})
+
+
+def load_demolition_draw(request):
+    demolition_draws = GraphicLabel.objects.filter(graphiclabel="拆迁")
+    sdemolition_draws = GraphicLabel.objects.filter(graphiclabel="疑似拆迁")
+    for draw_list in [demolition_draws, sdemolition_draws]:
+        for draw in draw_list:
+            json_context = json.loads(draw.context)
+            json_context['properties']['id'] = draw.id
+            draw.context = json.dumps(json_context)
+
+    demolition_draws_data = [draw.context for draw in demolition_draws]
+    sdemolition_draws_data = [draw.context for draw in sdemolition_draws]
+    return JsonResponse({'demolition_draws': demolition_draws_data, 'sdemolition_draws': sdemolition_draws_data})
+
+
 
 
 def query_draw(request):
@@ -693,6 +723,28 @@ def _ib_event_search(request):
         d_ib_draws[i]["graphic_provide"] = user.username
     return JsonResponse({'d_ib_draws': d_ib_draws})
 
+def history_data(request):
+    ibuild_data=GraphicLabel.objects.filter(graphiclabel="违建")
+    sibuild_data=GraphicLabel.objects.filter(graphiclabel="疑似违建")
+    demolition_data=GraphicLabel.objects.filter(graphiclabel="拆迁")
+    sdemolition_data=GraphicLabel.objects.filter(graphiclabel="疑似拆迁")
+    ibuild_count=ibuild_data.count()
+    sibuild_count=sibuild_data.count()
+    demolition_count=demolition_data.count()
+    sdemolition_count=sdemolition_data.count()
+    ibuild_area=0
+    sibuild_area=0
+    demolition_area=0
+    sdemolition_area=0
+    for event in ibuild_data:
+        ibuild_area+=event.square
+    for event in sibuild_data:
+        sibuild_area += event.square
+    for event in demolition_data:
+        demolition_area+=event.square
+    for event in sdemolition_data:
+        sdemolition_area+=event.square
+    return JsonResponse({"area":[ibuild_area,sibuild_area,demolition_area,sdemolition_area],"count":[ibuild_count,sibuild_count,demolition_count,sdemolition_count]})
 
 def _de_event_search(request):
     name = request.GET.get('query_name', False)

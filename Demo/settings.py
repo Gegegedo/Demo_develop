@@ -15,7 +15,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+#GEOS_LIBRARY_PATH = '/home/zhou/local/lib/libgeos_c.so'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -84,19 +84,29 @@ WSGI_APPLICATION = 'Demo.wsgi.application'
 
 
 }'''
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django
+#         'NAME': 'RSI_NEW',
+#         'USER': 'root',
+#         'PASSWORD': '123456',
+#         'HOST':'localhost',
+#         'PORT':'3306',
+#         'OPTIONS':{
+#             "init_command":"SET foreign_key_checks = 0;",
+#         }
+#
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django
-        'NAME': 'RSI_NEW',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST':'localhost',
-        'PORT':'3306',
-        'OPTIONS':{
-            "init_command":"SET foreign_key_checks = 0;",
-        }
-
-    }
+         'ENGINE': 'django.contrib.gis.db.backends.postgis',
+         'NAME': 'rsi',
+         'USER': 'postgres',
+         'PASSWORD':123456,
+         'HOST':'localhost',
+        'PORT':'',
+    },
 }
 
 # Password validation

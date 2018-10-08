@@ -49,6 +49,8 @@ urlpatterns = [
     url(r'^ib_plotting/', views.ib_plotting),
     url(r'^developing/', views.developing),
     url(r'^seperate_load_draw/', views.seperate_load_draw),
+    url(r'^history_data/', views.history_data),
+
 ##########################################################################
 
     url(r'^is_authenticated/', views.is_authenticated),
@@ -75,7 +77,8 @@ urlpatterns = [
     url(r'^_de_event_search/',views._de_event_search),
     url(r'^no_permissions/',views.no_permissions),
     url(r'^not_login/',views.not_login),
-
+    url(r'^load_demolition_draw/',views.load_demolition_draw),
+    url(r'^load_ibuild_draw/',views.load_ibuild_draw),
     ##########################################################
     url(r'^user_center/', views.user_center),
     url(r'^account_management/', views.account_management),

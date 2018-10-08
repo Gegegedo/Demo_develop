@@ -176,7 +176,13 @@
                             <img src="{% static 'img/contrast.png' %}" style="height:60%; margin-right:8px; margin-bottom:3px;">
                             <span id="compare_span">开始对比</span>
                     </button>
+
                 </span>
+            </div>
+             <div style="overflow:hidden;float:right;margin-right:1.6rem;margin-top:20px;">
+                <button  style="min-width:100px;min-height:40px" id="btn1"><p class="w1">拆迁</p></button>
+
+                <button  style="min-width:100px;min-height:40px" id="btn2"><p class="w2">疑似拆迁</p></button>
             </div>
         </div>
     </div>
@@ -433,6 +439,7 @@ function change1(){
                 projection: 'EPSG:4326'
             }),
             new ol.control.ScaleLine({  }),
+            new ol.control.FullScreen({source:'map'}),
             new ol.control.ZoomSlider({
                 maxResolution:1000,
                 minResolution:1000
@@ -456,7 +463,7 @@ function change1(){
             map.getView().animate({zoom: map.getView().getZoom() + 5},{center:(cords)});
     </script>
 
-    <script src="{% static 'js/load_draw.js' %}"></script>
+    <script src="{% static 'js/load_demolition_draw.js' %}"></script>
     <script src="{% static 'js/roller_shutters.js' %}"></script>
     <script src="{% static 'js/select_draw.js' %}"></script>
     <script src="{% static 'js/polygon1.js' %}"></script>
