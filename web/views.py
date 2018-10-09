@@ -1,7 +1,8 @@
 
-
-
 from __future__ import unicode_literals
+from django.contrib.gis.geos import GEOSGeometry
+from web.models import Mask
+import os
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth import authenticate
@@ -44,6 +45,12 @@ def _resource_search(request):
                   template_name='rm_resource_search.html')
 
 def index_new(request):
+    with open(os.path.abspath('../Demo/Maps/8/geojsons_t1.json')) as json_file:
+        # print(str(json.load(json_file)[0]['geometry']))
+        # P=GEOSGeometry(str(json.load(json_file)[0]['geometry']))
+        P=GEOSGeometry('{ "type": "Polygon", "coordinates": [[ 5.000000, 23.000000 ],[5.0,20.0],[8.0,22.0]] }')
+        m = Mask(code='test', poly=P)
+        m.save()
     return render(request,
                   template_name='index_new.html')
 

@@ -6,6 +6,7 @@ from django.contrib.auth import get_user_model
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.contrib.gis.db import models
 # Create your models here.
 
 
@@ -124,3 +125,7 @@ class AutoGraphicLabel(models.Model):
     coordinate_x = models.FloatField(default=0)
     coordinate_y = models.FloatField(default=0)
     createtime=models.DateField(auto_now_add=True)
+
+class Mask(models.Model):
+    code=models.CharField(max_length=20)
+    poly=models.PolygonField()
