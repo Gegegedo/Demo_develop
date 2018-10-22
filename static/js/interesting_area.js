@@ -6,30 +6,65 @@ var sdemolition_state=false;
 var all_draws;
 
     $.get("/seperate_load_draw/", function(ret){
-
-
         ibuild_draws=ret['ibuild'];
         sibuild_draws=ret['sibuild'];
         demolition_draws=ret['demolition'];
         sdemolition_draws=ret['sdemolition'];
+        interesting_area=ret['interesting_area'];
         ibuild_draws=JSON.parse(ibuild_draws);
         sibuild_draws=JSON.parse(sibuild_draws);
         demolition_draws=JSON.parse(demolition_draws);
         sdemolition_draws=JSON.parse(sdemolition_draws);
 
+        for(var i in interesting_area){
+            //alert(all_draws[i]);
+             interesting_area[i]["geometry"]=JSON.parse(interesting_area[i]["geometry"]);
+              var features=(new ol.format.GeoJSON()).readFeatures(interesting_area[i]);
+               style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color: '#FF0000',
+                     width: 3,
+                     lineDash:[10,10,10,10,10,10],
+                }),
+            });
+            features[0].setStyle(style);
+            var vectorSource = new ol.source.Vector({
+                features: features
+              });
 
+            var vectorLayer = new ol.layer.Vector({
+                source: vectorSource,
+                opacity:1
+            });
 
+           map.addLayer(vectorLayer);
+
+        }
         for(var i in ibuild_draws){
 
              ibuild_draws[i]["context"]=JSON.parse(ibuild_draws[i]["context"]);
-            var vectorSource = new ol.source.Vector({
-                features: (new ol.format.GeoJSON()).readFeatures(ibuild_draws[i]["context"])
-              });
+             ibuild_draws[i]["context"]["geometry"]=JSON.parse(ibuild_draws[i]["context"]["geometry"]);
+             ibuild_draws[i]["center"]=JSON.parse(ibuild_draws[i]["center"]);
+             var features=(new ol.format.GeoJSON()).readFeatures(ibuild_draws[i]["context"]);
 
-            var ibuild_vectorLayer = new ol.layer.Vector({
-                source: vectorSource
+            style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color:'#00FFFF',
+                   width: 1,
+                }),
+                fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+                    color: '#A6C2DE'
+                }),
             });
-         ibuild_draws[i]["layer"]=ibuild_vectorLayer
+            features[0].setStyle(style);
+            var vectorSource = new ol.source.Vector({
+                features: features
+              });
+            var ibuild_vectorLayer = new ol.layer.Vector({
+                source: vectorSource,
+                opacity:0.5
+            });
+         ibuild_draws[i]["layer"]=ibuild_vectorLayer;
          //
          //var htmltext="<div id='wholebox"+ibuild_draws[i]["id"]+"' onclick='control_ibox(\" "+ibuild_draws[i]["id"]+" \")'>"
          var htmltext="<div id='wholebox"+ibuild_draws[i]["id"]+"'>"
@@ -72,31 +107,39 @@ var all_draws;
                 duration: 250   //当Popup超出地图边界时，为了Popup全部可见，地图移动的速度.
               }
             });
-            sumlon=0;
-            sumlan=0;
-            coords=ibuild_draws[i]["context"]["geometry"]["coordinates"][0];
 
-            for(j in coords){
-            sumlon+=coords[j][0];
-            sumlan+=coords[j][1];
-            }
-            popup.setPosition([sumlon/coords.length,sumlan/coords.length]);
+            var lon=ibuild_draws[i]["center"]["coordinates"][0];
+            var lan=ibuild_draws[i]["center"]["coordinates"][1];
+            popup.setPosition([lon,lan]);
             ibuild_draws[i]["overlay"]=popup;
 
 
         }
         for(var i in sibuild_draws){
                    sibuild_draws[i]["context"]=JSON.parse(sibuild_draws[i]["context"]);
+                    sibuild_draws[i]["context"]["geometry"]=JSON.parse(sibuild_draws[i]["context"]["geometry"]);
+             sibuild_draws[i]["center"]=JSON.parse(sibuild_draws[i]["center"]);
+             var features=(new ol.format.GeoJSON()).readFeatures(sibuild_draws[i]["context"]);
+             style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color:  '#FFFFFF',
+                   width: 1,
+                }),
+                fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+                    color: '#FFED59'
+                }),
+            });
+            features[0].setStyle(style);
             var vectorSource = new ol.source.Vector({
-                features: (new ol.format.GeoJSON()).readFeatures(sibuild_draws[i]["context"])
+                features: features
               });
 
             var sibuild_vectorLayer = new ol.layer.Vector({
-                source: vectorSource
+                source: vectorSource,
+                opacity:0.5
             });
-         sibuild_draws[i]["layer"]=sibuild_vectorLayer
-         //
-         //var htmltext="<div id='wholebox"+ibuild_draws[i]["id"]+"' onclick='control_ibox(\" "+ibuild_draws[i]["id"]+" \")'>"
+         sibuild_draws[i]["layer"]=sibuild_vectorLayer;
+
          var htmltext="<div id='wholebox"+sibuild_draws[i]["id"]+"'>"
               +"<img class='giftu' src='/static/img/weizhi-cheng.gif' alt='' >"
               +"<div   id='ibox"+sibuild_draws[i]["id"]+"'>"
@@ -137,15 +180,10 @@ var all_draws;
                 duration: 250   //当Popup超出地图边界时，为了Popup全部可见，地图移动的速度.
               }
             });
-            sumlon=0;
-            sumlan=0;
-            coords=sibuild_draws[i]["context"]["geometry"]["coordinates"][0];
+            var lon=sibuild_draws[i]["center"]["coordinates"][0];
+            var lan=sibuild_draws[i]["center"]["coordinates"][1];
+            popup.setPosition([lon,lan]);
 
-            for(j in coords){
-            sumlon+=coords[j][0];
-            sumlan+=coords[j][1];
-            }
-            popup.setPosition([sumlon/coords.length,sumlan/coords.length]);
             sibuild_draws[i]["overlay"]=popup;
 
 
@@ -153,12 +191,24 @@ var all_draws;
 
         for(var i in demolition_draws){
            demolition_draws[i]["context"]=JSON.parse(demolition_draws[i]["context"]);
+           demolition_draws[i]["context"]["geometry"]=JSON.parse(demolition_draws[i]["context"]["geometry"]);
+           demolition_draws[i]["center"]=JSON.parse(demolition_draws[i]["center"]);
+           var features=(new ol.format.GeoJSON()).readFeatures(demolition_draws[i]["context"]);
+             style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color: '#FF0000',
+                     width: 3,
+                     lineDash:[10,10,10,10,10,10],
+                }),
+            });
+            features[0].setStyle(style);
             var vectorSource = new ol.source.Vector({
-                features: (new ol.format.GeoJSON()).readFeatures(demolition_draws[i]["context"])
+                features: features
               });
 
             var demolition_vectorLayer = new ol.layer.Vector({
-                source: vectorSource
+                source: vectorSource,
+                opacity:0.5
             });
          demolition_draws[i]["layer"]=demolition_vectorLayer
          //
@@ -203,15 +253,9 @@ var all_draws;
                 duration: 250   //当Popup超出地图边界时，为了Popup全部可见，地图移动的速度.
               }
             });
-            sumlon=0;
-            sumlan=0;
-            coords=demolition_draws[i]["context"]["geometry"]["coordinates"][0];
-
-            for(j in coords){
-            sumlon+=coords[j][0];
-            sumlan+=coords[j][1];
-            }
-            popup.setPosition([sumlon/coords.length,sumlan/coords.length]);
+            var lon=demolition_draws[i]["center"]["coordinates"][0];
+            var lan=demolition_draws[i]["center"]["coordinates"][1];
+            popup.setPosition([lon,lan]);
             demolition_draws[i]["overlay"]=popup;
 
 
@@ -219,12 +263,26 @@ var all_draws;
 
         for(var i in sdemolition_draws){
              sdemolition_draws[i]["context"]=JSON.parse(sdemolition_draws[i]["context"]);
+             sdemolition_draws[i]["context"]["geometry"]=JSON.parse(sdemolition_draws[i]["context"]["geometry"]);
+             sdemolition_draws[i]["center"]=JSON.parse(sdemolition_draws[i]["center"]);
+             var features=(new ol.format.GeoJSON()).readFeatures(sdemolition_draws[i]["context"]);
+              style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color:  '#FFFFFF',
+                   width: 1,
+                }),
+                fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+                    color: '#FFED59'
+                }),
+            });
+            features[0].setStyle(style);
             var vectorSource = new ol.source.Vector({
-                features: (new ol.format.GeoJSON()).readFeatures(sdemolition_draws[i]["context"])
+                features: features
               });
 
             var sdemolition_vectorLayer = new ol.layer.Vector({
-                source: vectorSource
+                source: vectorSource,
+                opacity:0.5
             });
          sdemolition_draws[i]["layer"]=sdemolition_vectorLayer
          //
@@ -269,15 +327,9 @@ var all_draws;
                 duration: 250   //当Popup超出地图边界时，为了Popup全部可见，地图移动的速度.
               }
             });
-            sumlon=0;
-            sumlan=0;
-            coords=sdemolition_draws[i]["context"]["geometry"]["coordinates"][0];
-
-            for(j in coords){
-            sumlon+=coords[j][0];
-            sumlan+=coords[j][1];
-            }
-            popup.setPosition([sumlon/coords.length,sumlan/coords.length]);
+             var lon=sdemolition_draws[i]["center"]["coordinates"][0];
+            var lan=sdemolition_draws[i]["center"]["coordinates"][1];
+            popup.setPosition([lon,lan]);
             sdemolition_draws[i]["overlay"]=popup;
 
 
@@ -356,83 +408,4 @@ map.addOverlay(sdemolition_draws[i]["overlay"]);
 }
 }
 })
-
-
-//
-
-//         var ibox=$("#ibox"+data);
-//         alert(ibox.css('font-size'));
-//         if(ibox.css("display")=="none"){
-//            ibox.css("display","block");
-//            alert("aaa");
-//           }else{
-//           alert("bbb");
-//            ibox.css("display","none");
-//           }
-
-
-
-//}
-//
-//   var changeStyle = function(feature){
-//        var ftype=feature.get("featuretype");
-//        return new ol.style.Style({
-//                stroke:new ol.style.Stroke({
-//                    color: '#319FD3',
-//                    width: 1,
-//                }),
-//                fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
-//                    color: 'rgba(255, 0, 0, 0.2)'
-//                }),
-//        });
-//    };
-//var close= document.getElementById("close_login").onclick;
-//    var selectClick = new ol.interaction.Select({
-//        condition: ol.events.condition.singleClick,
-//        style:changeStyle,
-//        //removeCondition: close
-//    });
-//    map.addInteraction(selectClick);
-//    selectClick.on("select",singleClickEvent);
-//    function singleClickEvent(e){
-//        var coords=e.selected[0].getGeometry().getCoordinates();
-//        var id=e.selected[0].getProperties().id;
-//
-//        //alert(e.selected[0].getProperties().id)
-//        $.get("/query_draw/",{'id':id}, function(ret){
-//            drawinfo=ret['drawinfo'];
-//            //alert(drawinfo.name)
-//            var name=$("#name");
-//            var square = $("#area");
-//            var type = $("#type");
-//            //var address = $("#adress");
-//            var time = $("#date");
-//            name.text(drawinfo.name);
-//            square.text(drawinfo.square);
-//            type.text(drawinfo.graphiclabel);
-//            //address.text(drawinfo.address);
-//            time.text(drawinfo.foundtime);
-//
-//            var popup_info = document.getElementById("imagePath1");
-//            popup_info.style.display="block";
-//            var popup = new ol.Overlay({
-//              element:popup_info,
-//              autoPan: true,
-//              autoPanAnimation: {
-//                duration: 250   //当Popup超出地图边界时，为了Popup全部可见，地图移动的速度.
-//              }
-//            });
-//            popup.setPosition(coords[0][0]);
-//            //popup_info.innerHTML=drawinfo.name
-//
-//            map.addOverlay(popup);
-//        });
-//        var bol22 = false;
-//        var imagePath1=document.getElementById("imagePath1");
-//        var xinxikuang1=document.getElementsByClassName('xinxikuang1')[0];
-//        imagePath1.onclick=function(){
-//        bol22=!bol22;
-//        xinxikuang1.style.display=bol22?"block":"none";
-//    }
-//    }
 });

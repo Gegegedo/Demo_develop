@@ -17,6 +17,9 @@ function open_demolition(url){
 function open_illegal_building(url){
     document.getElementById("illegal_building_container").src = url;
 }
+function open_interesting_area(url){
+    document.getElementById("interesting_area_container").src = url;
+}
 
 function open_resource_management(url){
     document.getElementById("resource_management_container").src = url;

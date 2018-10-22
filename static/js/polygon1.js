@@ -30,11 +30,12 @@ $(function(){
         var geojson_c = new ol.format.GeoJSON();
         var current_feature=e.feature;
         var geo = current_feature.getGeometry();
+
         var output = formatArea(geo);
         $("#square").val(output);
         var coordinates=geo.getCoordinates();
+
         var geostr = coordinates[0].join(";");
-        //alert(geostr);
  //默认获取当前日期
         var today = new Date();
         var nowdate = (today.getFullYear()) + "-" + (today.getMonth() + 1) + "-" + today.getDate();
@@ -44,7 +45,7 @@ $(function(){
         var day = date.getDate();
         var mydate = date.getFullYear() + "-" + (mon < 10 ? "0" + mon : mon) + "-" + (day < 10 ? "0" + day : day);
         $("#foundtime").val(mydate);
-        $("#foundtime").attr("diabled",true);
+        $("#foundtime").attr("disabled",true);
         var container = document.getElementById('popup');
         var save_button=$("#save_submit");
         var update_button=$("#save_update");
@@ -159,6 +160,3 @@ $(function(){
                 };
 });
 
-function save_data(geotype,geodata,name,type,time){
-
-}

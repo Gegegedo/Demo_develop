@@ -48,6 +48,9 @@ $(function(){
         var container = document.getElementById('popup');
         var save_button=$("#save_submit");
         var update_button=$("#save_update");
+        $("#name").val("");
+        $("#type").val("");
+        $("#address").val("");
         container.style.display="block";
         update_button.hide();
         save_button.show();
@@ -63,11 +66,30 @@ $(function(){
         map.addOverlay(overlay);
 
         var submit = document.getElementById("save_submit");
-
+var submit = document.getElementById("save_submit");
         submit.onclick=function(){
-        container.style.display="none";
-        draw_btn=document.getElementById("draw_button_div");
-            draw_btn.innerHTML="勾画感兴趣区域";
+            var name = document.getElementById("name").value;
+            var type = document.getElementById("type").value;
+            var square = document.getElementById("square").value;
+            var address = document.getElementById("address").value;
+            $.ajax({
+                type:'post',
+                url:'/save_interesting_area/',
+                data: {
+                    'coordi':geostr,
+                    'name':name,
+                    'type':type,
+                    'square':square,
+                    'address':address
+                },
+                success:function(){
+                    alert('保存成功！');
+                    location.reload();
+                    },
+                error:function(){
+                    alert('保存失败');
+                    }
+              });
         }
         var cancel=document.getElementById("save_cancel");
         cancel.onclick=function(){

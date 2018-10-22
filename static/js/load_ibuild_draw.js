@@ -5,15 +5,19 @@ $(document).ready(function(){
     $.get("/load_ibuild_draw/", function(ret){
         ibuild_draws=ret['ibuild_draws'];
         sibuild_draws=ret['sibuild_draws'];
+        interesting_area=ret["interesting_area"];
         for(var i in ibuild_draws){
+
+        ibuild_draws[i]["geometry"]=JSON.parse(ibuild_draws[i]["geometry"]);
+
            var features=(new ol.format.GeoJSON()).readFeatures(ibuild_draws[i]);
             style=new ol.style.Style({
                 stroke:new ol.style.Stroke({
-                    color: '#319FD3',
+                    color:'#00FFFF',
                    width: 1,
                 }),
                 fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
-                    color: 'rgba(54, 21, 169, 0.2)'
+                    color: '#A6C2DE'
                 }),
             });
             features[0].setStyle(style);
@@ -22,20 +26,23 @@ $(document).ready(function(){
               });
 
             var vectorLayer = new ol.layer.Vector({
-                source: vectorSource
+                source: vectorSource,
+                 opacity:0.5
             });
 
             ibuild_draws[i]=vectorLayer;
         }
+
         for(var i in sibuild_draws){
+        sibuild_draws[i]["geometry"]=JSON.parse(sibuild_draws[i]["geometry"]);
         var features=(new ol.format.GeoJSON()).readFeatures(sibuild_draws[i]);
             style=new ol.style.Style({
                 stroke:new ol.style.Stroke({
-                    color: '#319FD3',
+                    color:  '#FFFFFF',
                    width: 1,
                 }),
                 fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
-                    color: 'rgba(144, 121, 69, 0.2)'
+                    color: '#FFED59'
                 }),
             });
             features[0].setStyle(style);
@@ -44,10 +51,39 @@ $(document).ready(function(){
                 features: features
               });
             var vectorLayer = new ol.layer.Vector({
-                source: vectorSource
+                source: vectorSource,
+                 opacity:0.5
             });
 
             sibuild_draws[i]=vectorLayer;
+        }
+
+              for(var i in interesting_area){
+            //alert(all_draws[i]);
+             interesting_area[i]["geometry"]=JSON.parse(interesting_area[i]["geometry"]);
+              var features=(new ol.format.GeoJSON()).readFeatures(interesting_area[i]);
+               style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color: '#FF0000',
+                     width: 3,
+                     lineDash:[10,10,10,10,10,10],
+                }),
+//                fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+//                    color: 'rgba(234, 111, 169, 0.2)'
+//                }),
+            });
+            features[0].setStyle(style);
+            var vectorSource = new ol.source.Vector({
+                features: features
+              });
+
+            var vectorLayer = new ol.layer.Vector({
+                source: vectorSource,
+                opacity:1
+            });
+
+           map.addLayer(vectorLayer);
+
         }
     });
     $("#btn1").click(function(){

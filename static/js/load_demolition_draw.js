@@ -5,29 +5,83 @@ $(document).ready(function(){
     $.get("/load_demolition_draw/", function(ret){
         demolition_draws=ret['demolition_draws'];
         sdemolition_draws=ret['sdemolition_draws'];
+        interesting_area=ret["interesting_area"];
         for(var i in demolition_draws){
             //alert(all_draws[i]);
+              demolition_draws[i]["geometry"]=JSON.parse(demolition_draws[i]["geometry"]);
+              var features=(new ol.format.GeoJSON()).readFeatures(demolition_draws[i]);
+              console.log(features);
+              console.log(100);
+               style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color: '#00FFFF',
+                   width: 1,
+                }),
+                fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+                    color: '#A6C2DE'
+                }),
+            });
+            features[0].setStyle(style);
             var vectorSource = new ol.source.Vector({
-                features: (new ol.format.GeoJSON()).readFeatures(demolition_draws[i])
+                features: features
               });
 
             var vectorLayer = new ol.layer.Vector({
-                source: vectorSource
+                source: vectorSource,
+                opacity:0.5
             });
 
             demolition_draws[i]=vectorLayer;
         }
         for(var i in sdemolition_draws){
             //alert(all_draws[i]);
+             sdemolition_draws[i]["geometry"]=JSON.parse(sdemolition_draws[i]["geometry"]);
+              var features=(new ol.format.GeoJSON()).readFeatures(sdemolition_draws[i]);
+              console.log(features);
+               style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color: '#FFFFFF',
+                   width: 1,
+                }),
+                fill: new ol.style.Fill({ //矢量图层填充颜色，以及透明度
+                    color: '#FFED59'
+                }),
+            });
+            features[0].setStyle(style);
             var vectorSource = new ol.source.Vector({
-                features: (new ol.format.GeoJSON()).readFeatures(sdemolition_draws[i])
+                features: features
               });
 
             var vectorLayer = new ol.layer.Vector({
-                source: vectorSource
+                source: vectorSource,
+                opacity:0.5
             });
 
             sdemolition_draws[i]=vectorLayer;
+        }
+        for(var i in interesting_area){
+            //alert(all_draws[i]);
+             interesting_area[i]["geometry"]=JSON.parse(interesting_area[i]["geometry"]);
+              var features=(new ol.format.GeoJSON()).readFeatures(interesting_area[i]);
+               style=new ol.style.Style({
+                stroke:new ol.style.Stroke({
+                    color: '#FF0000',
+                     width: 3,
+                     lineDash:[10,10,10,10,10,10],
+                }),
+            });
+            features[0].setStyle(style);
+            var vectorSource = new ol.source.Vector({
+                features: features
+              });
+
+            var vectorLayer = new ol.layer.Vector({
+                source: vectorSource,
+                opacity:1
+            });
+
+           map.addLayer(vectorLayer);
+
         }
     });
     $("#btn1").click(function(){

@@ -1,5 +1,5 @@
-
 from __future__ import unicode_literals
+from django.contrib.gis.geos import fromstr
 from django.contrib.gis.geos import GEOSGeometry
 from web.models import Mask
 import os
@@ -20,6 +20,7 @@ from django.core import serializers
 from web.models import Myuser
 from web.models import GraphicLabel
 from web.models import AutoGraphicLabel
+from web.models import InterestingArea
 from django.forms.models import model_to_dict
 from django.core.serializers.json import DjangoJSONEncoder
 from django.http import HttpResponse, JsonResponse
@@ -29,6 +30,7 @@ from web.ImageryServer import ImagePubMan
 from web.ImageryServer import Auto_graphiclabel
 import urllib.request
 from django.db.models import Q
+from django.views.decorators.csrf import csrf_exempt
 #from web.ImageryServer import ImagePre
 # Create your views here.
 ##################################################
@@ -45,10 +47,10 @@ def _resource_search(request):
                   template_name='rm_resource_search.html')
 
 def index_new(request):
-    with open(os.path.abspath('../Demo/Maps/8/geojsons_t1.json')) as json_file:
+    with open(os.path.abspath('../Demo_develop/Maps/8/geojsons_t1.json')) as json_file:
         # print(str(json.load(json_file)[0]['geometry']))
-        # P=GEOSGeometry(str(json.load(json_file)[0]['geometry']))
-        P=GEOSGeometry('{ "type": "Polygon", "coordinates": [[ 5.000000, 23.000000 ],[5.0,20.0],[8.0,22.0]] }')
+        P=fromstr(str(json.load(json_file)[0]['geometry']))
+        #P=GEOSGeometry('{ "type": "Polygon", "coordinates": [[ 5.000000, 23.000000 ],[5.0,20.0],[8.0,22.0]] }')
         m = Mask(code='test', poly=P)
         m.save()
     return render(request,
@@ -121,6 +123,11 @@ def password_revise(request):
     return render(request,
                   template_name='uc_password_revise.html')
 
+def developing(request):
+    return render(request,
+                  template_name='developing.html')
+
+
 def permissions_query(request):
     return render(request,
                   template_name='am_permissions_query.html')
@@ -133,8 +140,8 @@ def ib_roller_shutters(request):
 def user_center(request):
     return render(request,
                   template_name='view_user_center.html')
-@login_required(login_url="/not_login/")
-@permission_required('web.user_management',login_url='/no_permissions/')
+# @login_required(login_url="/not_login/")
+# @permission_required('web.user_management',login_url='/no_permissions/')
 def account_management(request):
     return render(request,
                   template_name='view_account_management.html')
@@ -160,6 +167,14 @@ def general_survey(request):
 def resource_management(request):
     return render(request,
                   template_name='view_resource_management.html')
+
+def view_interesting_area(request):
+    return render(request,
+                  template_name='view_interesting_area.html')
+
+def interesting_area_management(request):
+    return render(request,
+                  template_name='interesting_area_management.html')
 
 
 def uploadImage(request):
@@ -206,10 +221,8 @@ def ceshi(request):
                   template_name='ceshi.html')
 def regional_present_situation(request):
     return render(request,
-                  template_name='regional_present_situation.html')
-def ceshi(request):
-    return render(request,
-                  template_name='ceshi.html')
+                  template_name='regional_chart.html')
+
 def ziyuanfenleixiangcha(request):
     return render(request,
                   template_name='ziyuanfenleixiangcha.html')
@@ -222,10 +235,10 @@ def demolition_management(request):
 def ib_event_management(request):
     return render(request,'ib_event_management.html')
 
-def chaiqian(request):
-    return render(request,'chaiqian.html')
-def ceshi2(request):
-    return render(request,'ceshi2.html')
+def event_statics(request):
+    return render(request,'event_statics.html')
+def region_situation(request):
+    return render(request,'region_situation.html')
 def homeceshi(request):
     return render(request,'homeceshi.html')
 def demolition_compare(request):
@@ -237,21 +250,32 @@ def demolition_plotting(request):
     x=0;y=0;
     if id:
         draw=GraphicLabel.objects.get(id=id)
-        x=draw.coordinate_x
-        y=draw.coordinate_y
+        point=draw.poly.centroid
+        x=draw.poly.centroid[0]
+        y=draw.poly.centroid[1]
     return render(request,'de_plotting.html',{'x':x,'y':y})
 
 def developing(request):
-    return render(request,
-                  template_name='developing.html')
+    id = request.GET.get('id', False)
+    x = 0.0;
+    y = 0.0;
+    g_type = None
+    if id:
+        draw =InterestingArea.objects.get(id=id)
+        point = draw.poly.centroid
+        x = draw.poly.centroid[0]
+        y = draw.poly.centroid[1]
+        g_type = draw.type
+    return render(request, 'developing.html', {'x': x, 'y': y, 'type': json.dumps(g_type, cls=DjangoJSONEncoder)})
 
 def ib_plotting(request):
     id=request.GET.get('id',False)
     x=0.0;y=0.0;g_type=None
     if id:
         draw=GraphicLabel.objects.get(id=id)
-        x=draw.coordinate_x
-        y=draw.coordinate_y
+        point = draw.poly.centroid
+        x = draw.poly.centroid[0]
+        y = draw.poly.centroid[1]
         g_type=draw.graphiclabel
     return render(request,'ib_plotting.html',{'x':x,'y':y,'type':json.dumps(g_type,cls=DjangoJSONEncoder)})
 
@@ -507,11 +531,20 @@ def status_revise(request):
     user.is_active=is_active
     user.save()
     return JsonResponse({"message":"success"})
+@csrf_exempt
+def area_status_revise(request):
 
+    is_active=request.POST.get('is_active', False)
+    id=request.POST.get('id', False)
+    user=InterestingArea.objects.get(id=id)
+    user.is_active=is_active
+    user.save()
+    return JsonResponse({"message":"success"})
 
 def save_draw(request):
     graphic_provide=request.user.id
     raw_dic = request.POST.get('coordi', False)
+    #geo=request.POST.get('geo', False)
     name = request.POST.get('name', False)
     graphictype = request.POST.get('graphictype', False)
     graphiclabel = request.POST.get('graphiclabel', False)
@@ -523,14 +556,29 @@ def save_draw(request):
     coordis_list=[coordis_num[i:i+2] for i in range(0,len(coordis_num),2)]
     coordinate_x=coordis_list[0][0]
     coordinate_y=coordis_list[0][1]
-    jsonstr={'type':'Feature','geometry':{'type':'Polygon','coordinates':[coordis_list]},'properties':{'id':0}}
-    jsondata=json.dumps(jsonstr)
-    draw_obj = GraphicLabel.objects.create(name=name,context=jsondata,graphictype=graphictype,graphiclabel=graphiclabel,graphic_provide=request.user,discrib=discrib,square=square,address=address,coordinate_x=coordinate_x,coordinate_y=coordinate_y)
+    jsonstr={'type':'Polygon','coordinates':[coordis_list]}
+    poly=fromstr(str(jsonstr))
+    draw_obj = GraphicLabel.objects.create(name=name,poly=poly,graphictype=graphictype,graphiclabel=graphiclabel,graphic_provide=request.user,discrib=discrib,square=square,address=address)
+    draw_obj.save()
+    return HttpResponse("success")
+@csrf_exempt
+def save_interesting_area(request):
+    raw_dic = request.POST.get('coordi', False)
+    type=request.POST.get('type', False)
+    name = request.POST.get('name', False)
+    square = request.POST.get('square', 0)
+    address= request.POST.get('address', '无')
+    coordis=raw_dic.replace(",",";").split(";")
+    coordis_num=[float(c) for c in coordis]
+    coordis_list=[coordis_num[i:i+2] for i in range(0,len(coordis_num),2)]
+    jsonstr={'type':'Polygon','coordinates':[coordis_list]}
+    poly=fromstr(str(jsonstr))
+    draw_obj = InterestingArea.objects.create(name=name,poly=poly,type=type,square=square,address=address,area_provide=request.user)
     draw_obj.save()
     return HttpResponse("success")
 
-    #return render(request,'map_geo.html',{'message':'success'})
-    #return HttpResponse("success")
+
+
 
 
 def update_draw(request):
@@ -551,42 +599,57 @@ def update_draw(request):
         return HttpResponse("success")
     else:
         return HttpResponse("fail")
+@csrf_exempt
+def update_interesting_area(request):
+    id= request.POST.get('id', False)
+    name = request.POST.get('name', False)
+    type = request.POST.get('type', False)
+    address= request.POST.get('address', '无')
+    draw_obj=InterestingArea.objects.get(id=id)
+    if draw_obj:
+        draw_obj.name=name
+        draw_obj.type=type
+        draw_obj.address=address
+        draw_obj.save()
+        return HttpResponse("success")
+    else:
+        return HttpResponse("fail")
 
 def seperate_load_draw(request):
+
     draws=GraphicLabel.objects.all()
+    interesting_area = InterestingArea.objects.filter(is_active=True)
+    interesting_area_data = []
     ibuild_draws=[]
     sibuild_draws=[]
     demolition_draws=[]
     sdemolition_draws=[]
-    # ibuild_draws = GraphicLabel.objects.filter( graphiclabel="违建")
-    # sibuild_draws = GraphicLabel.objects.filter(graphiclabel="疑似违建")
-    # demolition_draws=GraphicLabel.objects.filter(graphiclabel="拆迁")
-    # sdemolition_draws = GraphicLabel.objects.filter(graphiclabel="疑似拆迁")
-    #draws=model_to_dict(draws)
+
     for draw in draws:
-          draw=model_to_dict(draw)
-          json_context = json.loads(draw["context"])
-          json_context['properties']['id'] = draw["id"]
-          draw["context"] = json.dumps(json_context)
+        for ir in interesting_area:
+            if (ir.poly.contains(draw.poly)):
+                  draw=model_to_dict(draw)
+                  json_context = {'type': 'Feature', 'geometry':draw["poly"].geojson, 'properties': {'id':draw["id"]}}
+                  draw["context"] = json.dumps(json_context)
+                  draw["center"]=draw["poly"].centroid.geojson
+                  draw['poly']=draw['poly'].geojson
+                  if(draw["graphiclabel"]=="违建"):
+                       ibuild_draws.append(draw)
+                  if (draw["graphiclabel"] == "疑似违建"):
+                       sibuild_draws.append(draw)
+                  if (draw["graphiclabel"] == "拆迁"):
+                       demolition_draws.append(draw)
+                  if (draw["graphiclabel"] == "疑似拆迁"):
+                       sdemolition_draws.append(draw)
+                  break
 
-          if(draw["graphiclabel"]=="违建"):
-              ibuild_draws.append(draw)
-          if (draw["graphiclabel"] == "疑似违建"):
-              sibuild_draws.append(draw)
-          if (draw["graphiclabel"] == "拆迁"):
-              demolition_draws.append(draw)
-          if (draw["graphiclabel"] == "疑似拆迁"):
-              sdemolition_draws.append(draw)
+    for ir in interesting_area:
+        draw = model_to_dict(ir)
+        json_context = {'type': 'Feature', 'geometry': draw["poly"].geojson,
+                        'properties': {'id': draw["id"], 'square': 0}}
+        interesting_area_data.append(json_context)
 
-    # ibuild_draws=model_to_dict(ibuild_draws)
-    # sibuild_draws=model_to_dict(sibuild_draws)
-    # demolition_draws=model_to_dict(demolition_draws)
-    # sdemolition_draws=model_to_dict(sdemolition_draws)
-    # ibuild_draws_data = [draw.context for draw in ibuild_draws]
-    # sibuild_draws_data = [draw.context for draw in sibuild_draws]
-    # demolition_draws_data = [draw.context for draw in demolition_draws]
-    # sdemolition_draws_data = [draw.context for draw in sdemolition_draws]
-    return JsonResponse({'ibuild': json.dumps(ibuild_draws,cls=DjangoJSONEncoder),"sibuild":json.dumps(sibuild_draws,cls=DjangoJSONEncoder),"demolition":json.dumps(demolition_draws,cls=DjangoJSONEncoder),"sdemolition":json.dumps(sdemolition_draws,cls=DjangoJSONEncoder)})
+    return JsonResponse({'ibuild': json.dumps(ibuild_draws,cls=DjangoJSONEncoder),"sibuild":json.dumps(sibuild_draws,cls=DjangoJSONEncoder),"demolition":json.dumps(demolition_draws,cls=DjangoJSONEncoder),"sdemolition":json.dumps(sdemolition_draws,cls=DjangoJSONEncoder),'interesting_area':interesting_area_data})
 
 def load_all_draw(request):
     all_draws=GraphicLabel.objects.all()
@@ -594,55 +657,119 @@ def load_all_draw(request):
         json_context=json.loads(draw.context)
         json_context['properties']['id']=draw.id
         draw.context=json.dumps(json_context)
-
     all_draws_data = [draw.context for draw in all_draws]
     return JsonResponse({'all_draws':all_draws_data})
 
 def load_ibuild_draw(request):
     ibuild_draws=GraphicLabel.objects.filter(graphiclabel="违建")
     sibuild_draws=GraphicLabel.objects.filter(graphiclabel="疑似违建")
-    for draw_list in [ibuild_draws,sibuild_draws]:
-        for draw in draw_list:
-          json_context=json.loads(draw.context)
-          json_context['properties']['id']=draw.id
-          draw.context=json.dumps(json_context)
+    interesting_area = InterestingArea.objects.filter(is_active=True)
+    interesting_area_data = []
+    ibuild_draws_data=[]
+    sibuild_draws_data = []
 
+    for draw in ibuild_draws:
+        for ir in interesting_area:
+            if (ir.poly.contains(draw.poly)):
+               draw = model_to_dict(draw)
+               json_context= {'type': 'Feature', 'geometry':draw["poly"].geojson, 'properties': {'id':draw["id"],'square':draw['square'],'foundtime':draw['foundtime'],'address':draw['address'],'graphiclabel':draw['graphiclabel'],'name':draw['name'],'graphictype':draw['graphictype'],'discrib':draw['discrib']}}
+               ibuild_draws_data.append(json_context)
+               break
 
-    ibuild_draws_data = [draw.context for draw in ibuild_draws]
-    sibuild_draws_data = [draw.context for draw in sibuild_draws]
-    return JsonResponse({'ibuild_draws':ibuild_draws_data,'sibuild_draws':sibuild_draws_data})
+    for draw in sibuild_draws:
+        for ir in interesting_area:
+            if (ir.poly.contains(draw.poly)):
+               draw = model_to_dict(draw)
+               json_context= {'type': 'Feature', 'geometry':draw["poly"].geojson, 'properties': {'id':draw["id"],'square':draw['square'],'foundtime':draw['foundtime'],'address':draw['address'],'graphiclabel':draw['graphiclabel'],'name':draw['name'],'graphictype':draw['graphictype'],'discrib':draw['discrib']}}
+               sibuild_draws_data.append(json_context)
+               break
+    for ir in interesting_area:
+          draw = model_to_dict(ir)
+          json_context= {'type': 'Feature', 'geometry':draw["poly"].geojson, 'properties': {'id':draw["id"],'square':0}}
+          interesting_area_data.append(json_context)
+    return JsonResponse({'ibuild_draws':ibuild_draws_data,'sibuild_draws':sibuild_draws_data,'interesting_area':interesting_area_data})
 
 
 def load_demolition_draw(request):
     demolition_draws = GraphicLabel.objects.filter(graphiclabel="拆迁")
     sdemolition_draws = GraphicLabel.objects.filter(graphiclabel="疑似拆迁")
-    for draw_list in [demolition_draws, sdemolition_draws]:
-        for draw in draw_list:
-            json_context = json.loads(draw.context)
-            json_context['properties']['id'] = draw.id
-            draw.context = json.dumps(json_context)
+    interesting_area=InterestingArea.objects.filter(is_active=True)
+    interesting_area_data=[]
+    demolition_draws_data = []
+    sdemolition_draws_data = []
 
-    demolition_draws_data = [draw.context for draw in demolition_draws]
-    sdemolition_draws_data = [draw.context for draw in sdemolition_draws]
-    return JsonResponse({'demolition_draws': demolition_draws_data, 'sdemolition_draws': sdemolition_draws_data})
+    for draw in demolition_draws:
+        for ir in interesting_area:
+            if(ir.poly.contains(draw.poly)):
+                  draw = model_to_dict(draw)
+                  json_context = {'type': 'Feature', 'geometry': draw["poly"].geojson,
+                        'properties': {'id': draw["id"], 'square': draw['square'], 'foundtime': draw['foundtime'],
+                                       'address': draw['address'], 'graphiclabel': draw['graphiclabel'],
+                                       'name': draw['name'], 'graphictype': draw['graphictype'],
+                                       'discrib': draw['discrib']}}
+                  demolition_draws_data.append(json_context)
+                  break
+
+    for draw in sdemolition_draws:
+        for ir in interesting_area:
+            if(ir.poly.contains(draw.poly)):
+                 draw = model_to_dict(draw)
+                 json_context = {'type': 'Feature', 'geometry': draw["poly"].geojson,
+                        'properties': {'id': draw["id"], 'square': draw['square'], 'foundtime': draw['foundtime'],
+                                       'address': draw['address'], 'graphiclabel': draw['graphiclabel'],
+                                       'name': draw['name'], 'graphictype': draw['graphictype'],
+                                       'discrib': draw['discrib']}}
+                 sdemolition_draws_data.append(json_context)
+                 break
+    for ir in interesting_area:
+          draw = model_to_dict(ir)
+          json_context= {'type': 'Feature', 'geometry':draw["poly"].geojson, 'properties': {'id':draw["id"],'square':0}}
+          interesting_area_data.append(json_context)
+    return JsonResponse({'demolition_draws': demolition_draws_data, 'sdemolition_draws': sdemolition_draws_data,'interesting_area':interesting_area_data})
+
+def load_interesting_area(request):
+    demolition_draws =InterestingArea.objects.filter(is_active=True)
+    interesting_area=[]
+
+    for draw in demolition_draws:
+        draw = model_to_dict(draw)
+        json_context = {'type': 'Feature', 'geometry': draw["poly"].geojson,
+                        'properties': {'id': draw["id"], 'square': draw['square'], 'foundtime': draw['foundtime'],
+                                       'address': draw['address'],
+                                       'name': draw['name'], 'type': draw['type'],}}
+        interesting_area.append(json_context)
+
+    # for draw in sdemolition_draws:
+    #     draw = model_to_dict(draw)
+    #     json_context = {'type': 'Feature', 'geometry': draw["poly"].geojson,
+    #                     'properties': {'id': draw["id"], 'square': draw['square'], 'foundtime': draw['foundtime'],
+    #                                    'address': draw['address'], 'graphiclabel': draw['graphiclabel'],
+    #                                    'name': draw['name'], 'graphictype': draw['graphictype'],
+    #                                    'discrib': draw['discrib']}}
+    #     sdemolition_draws_data.append(json_context)
+    return JsonResponse({'interesting_area': interesting_area})
 
 
-
-
-def query_draw(request):
-    id = request.GET.get('id', False)
-    draw=model_to_dict(GraphicLabel.objects.get(id=id))
-    if draw:
-        x=draw['graphictype']
-        y=draw['graphiclabel']
-        return JsonResponse({'drawinfo':draw})
-    else:
-        return JsonResponse({'drawinfo':''})
+# def query_draw(request):
+#     id = request.GET.get('id', False)
+#     draw=model_to_dict(GraphicLabel.objects.get(id=id))
+#     if draw:
+#         x=draw['graphictype']
+#         y=draw['graphiclabel']
+#         return JsonResponse({'drawinfo':draw})
+#     else:
+#         return JsonResponse({'drawinfo':''})
 
 
 def _delete_draw(request):
     id = request.GET.get('id', False)
     draw=GraphicLabel.objects.get(id=id)
+    draw.delete()
+    return JsonResponse({'message':'success'})
+
+def _delete_interesting_area(request):
+    id = request.GET.get('id', False)
+    draw=InterestingArea.objects.get(id=id)
     draw.delete()
     return JsonResponse({'message':'success'})
 
@@ -725,33 +852,84 @@ def _ib_event_search(request):
     d_ib_draws = {}
     for i in range(len(ib_draws)):
         d_ib_draws[i] = model_to_dict(ib_draws[i])
+        d_ib_draws[i].pop('poly')
         id = d_ib_draws[i]["graphic_provide"]
         user = User.objects.get(id=id)
         d_ib_draws[i]["graphic_provide"] = user.username
     return JsonResponse({'d_ib_draws': d_ib_draws})
+
+def _interesting_area_search(request):
+    name=request.GET.get('query_name',False)
+    type=request.GET.get('query_type',False)
+    createtime=request.GET.get('query_time',False)
+    address=request.GET.get('query_address',False)
+    kwargs = {}
+    #kwargs['graphiclabel__contains'] = "违建"
+    if(type==""):
+        ib_draws= InterestingArea.objects.all()
+    else:
+      if(type):
+        kwargs['type'] = type
+      if(name):
+        kwargs['name__contains'] = name
+      if(address):
+        kwargs['address__contains'] = address
+      if(createtime):
+        kwargs['foundtime'] = createtime
+      ib_draws = InterestingArea.objects.filter(**kwargs).order_by('-foundtime')
+
+    d_ib_draws = {}
+    for i in range(len(ib_draws)):
+        d_ib_draws[i] = model_to_dict(ib_draws[i])
+        d_ib_draws[i].pop('poly')
+        id = d_ib_draws[i]["area_provide"]
+        user = User.objects.get(id=id)
+        d_ib_draws[i]["area_provide"] = user.username
+    return JsonResponse({'d_ib_draws': d_ib_draws})
+
 
 def history_data(request):
     ibuild_data=GraphicLabel.objects.filter(graphiclabel="违建")
     sibuild_data=GraphicLabel.objects.filter(graphiclabel="疑似违建")
     demolition_data=GraphicLabel.objects.filter(graphiclabel="拆迁")
     sdemolition_data=GraphicLabel.objects.filter(graphiclabel="疑似拆迁")
-    ibuild_count=ibuild_data.count()
-    sibuild_count=sibuild_data.count()
-    demolition_count=demolition_data.count()
-    sdemolition_count=sdemolition_data.count()
-    ibuild_area=0
-    sibuild_area=0
-    demolition_area=0
-    sdemolition_area=0
-    for event in ibuild_data:
-        ibuild_area+=event.square
-    for event in sibuild_data:
-        sibuild_area += event.square
-    for event in demolition_data:
-        demolition_area+=event.square
-    for event in sdemolition_data:
-        sdemolition_area+=event.square
+    interesting_area=InterestingArea.objects.filter(is_active=True)
+    ibuild_count = 0
+    sibuild_count =0
+    demolition_count = 0
+    sdemolition_count = 0
+    ibuild_area = 0
+    sibuild_area = 0
+    demolition_area = 0
+    sdemolition_area = 0
+    for data in ibuild_data:
+        for ir in interesting_area:
+            if(ir.poly.contains(data.poly)):
+                ibuild_count+=1
+                ibuild_area += data.square
+                break
+    for data in sibuild_data:
+        for ir in interesting_area:
+            if (ir.poly.contains(data.poly)):
+                sibuild_count += 1
+                sibuild_area += data.square
+                break
+    for data in demolition_data:
+        for ir in interesting_area:
+            if (ir.poly.contains(data.poly)):
+                demolition_count += 1
+                demolition_area += data.square
+                break
+    for data in sdemolition_data:
+        for ir in interesting_area:
+            if (ir.poly.contains(data.poly)):
+                sdemolition_count += 1
+                sdemolition_area += data.square
+                break
     return JsonResponse({"area":[ibuild_area,sibuild_area,demolition_area,sdemolition_area],"count":[ibuild_count,sibuild_count,demolition_count,sdemolition_count]})
+
+def pie_data(request):
+    return
 
 def _de_event_search(request):
     name = request.GET.get('query_name', False)
@@ -772,6 +950,7 @@ def _de_event_search(request):
     d_de_draws = {}
     for i in range(len(de_draws)):
         d_de_draws[i] = model_to_dict(de_draws[i])
+        d_de_draws[i].pop('poly')
         id = d_de_draws[i]["graphic_provide"]
         user = User.objects.get(id=id)
         d_de_draws[i]["graphic_provide"] = user.username

@@ -89,12 +89,12 @@ class GraphicLabel(models.Model):
     name = models.CharField(max_length=16)
     graphictype = models.CharField(max_length=4,choices=GraphicType)#地物类型如建筑、森林、河流
     graphiclabel = models.CharField(max_length=4,choices=GraphicLabel)#标注类型如拆迁、违建
-    context = models.TextField()#坐标数据
+    poly = models.PolygonField(default='POLYGON(( 10 10, 10 20, 20 20, 20 15, 10 10))')
+    #context = models.TextField()#坐标数据
     discrib = models.TextField()
     square = models.FloatField(default=0)
     graphic_provide= models.ForeignKey(Myuser,on_delete=models.CASCADE,blank=True)
-    coordinate_x = models.FloatField(default=0)
-    coordinate_y = models.FloatField(default=0)
+
     createtime=models.DateField(auto_now_add=True)
     foundtime=models.DateField(blank=True,default=timezone.now)
     address=models.CharField(max_length=16,default='无')
@@ -129,3 +129,18 @@ class AutoGraphicLabel(models.Model):
 class Mask(models.Model):
     code=models.CharField(max_length=20)
     poly=models.PolygonField()
+
+class InterestingArea(models.Model):
+    Type=(
+        ('1','重点关注'),
+        ('2','紧急处理'),
+
+    )
+    area_provide = models.ForeignKey(Myuser, on_delete=models.CASCADE, blank=True,default=None)
+    name = models.CharField(max_length=16)
+    type = models.CharField(max_length=10, choices=Type)
+    square = models.FloatField(default=0)
+    foundtime = models.DateField(blank=True, default=timezone.now)
+    address = models.CharField(max_length=16, default='无')
+    poly = models.PolygonField(default='POLYGON(( 10 10, 10 20, 20 20, 20 15, 10 10))')
+    is_active = models.BooleanField(default=True, blank=True)
